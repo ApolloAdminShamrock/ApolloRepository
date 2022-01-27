@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Apollo"
+		},
+		"Apollo_Staging_connectionString": {
+			"value": ""
+		},
+		"AzureFileStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureFileStorageGYRO_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase4_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseInMast_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseRES_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"NewCSV_connectionString": {
+			"value": ""
+		},
+		"RESULTS_LinkedService_secretAccessKey": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer2RES_connectionString": {
+			"value": ""
+		},
+		"SqlServerstdim_connectionString": {
+			"value": ""
+		},
+		"dwbmirls_connectionString": {
+			"value": ""
+		},
+		"dwgmirls_connectionString": {
+			"value": ""
+		},
+		"irblob_connectionString": {
+			"value": ""
+		},
+		"new LSBlob_connectionString": {
+			"value": ""
+		},
+		"RESULTS_LinkedService_properties_typeProperties_accessKeyId": {
+			"value": "ApolloAdmin"
+		},
+		"T_Results_File_Drop_properties_typeProperties_scope": {
+			"value": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock"
+		},
+		"drop_properties_typeProperties_scope": {
+			"value": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock"
+		}
+	}
+}
