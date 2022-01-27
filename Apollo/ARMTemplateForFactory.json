@@ -1212,7 +1212,7 @@
 				],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "PNMAST_UNION_VIEW"
+					"table": "vw_FDAStatusReport"
 				}
 			},
 			"dependsOn": [
