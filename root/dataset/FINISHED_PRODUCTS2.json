@@ -1,0 +1,24 @@
+{
+	"name": "FINISHED_PRODUCTS2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NewCSV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "FINISHED_PRODUCTS2.csv",
+				"folderPath": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

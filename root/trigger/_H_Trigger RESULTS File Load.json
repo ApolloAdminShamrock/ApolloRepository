@@ -1,0 +1,18 @@
+{
+	"name": "_H_Trigger RESULTS File Load",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2021-12-07T13:30:00Z",
+				"endTime": "2021-12-10T15:01:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

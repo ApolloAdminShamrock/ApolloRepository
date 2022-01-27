@@ -1,0 +1,56 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dwbmirls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "BatchNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BatchType",
+				"type": "char"
+			},
+			{
+				"name": "FormulaId",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ItemKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RecUserid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "BatchLocation",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PNMAST_UNION_VIEW"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

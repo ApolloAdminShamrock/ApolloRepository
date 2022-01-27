@@ -1,0 +1,17 @@
+{
+	"name": "StagingSQLData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INMAST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

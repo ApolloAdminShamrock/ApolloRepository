@@ -1,0 +1,17 @@
+{
+	"name": "T_StagingTo360",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-12-09T16:32:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

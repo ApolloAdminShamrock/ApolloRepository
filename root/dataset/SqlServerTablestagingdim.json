@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerTablestagingdim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerstdim",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Product_DIM"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

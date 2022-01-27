@@ -1,0 +1,25 @@
+{
+	"name": "StressTest",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Apollo Product_DIM Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2022-01-08T00:04:00",
+				"endTime": "2022-01-08T07:00:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

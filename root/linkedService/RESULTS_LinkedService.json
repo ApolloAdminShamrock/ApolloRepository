@@ -1,0 +1,14 @@
+{
+	"name": "RESULTS_LinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AmazonS3",
+		"typeProperties": {
+			"serviceUrl": "",
+			"accessKeyId": "ApolloAdmin",
+			"authenticationType": "AccessKey",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdEQzlCMDNFLTNEODMtNEFGQi1CM0Q4LTRFOUYxNzUxNDI2RV9iYjZkODAzMS1kOGZmLTQyMDQtOTBmMS1jM2Y0MTQ2NTY3ZjQiDQp9"
+		}
+	}
+}
