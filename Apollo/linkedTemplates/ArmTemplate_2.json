@@ -241,7 +241,7 @@
 			"properties": {
 				"description": "Daily Product_DIM Production Run",
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -257,7 +257,8 @@
 						"frequency": "Day",
 						"interval": 1,
 						"startTime": "2022-01-13T05:00:00",
-						"timeZone": "Eastern Standard Time"
+						"timeZone": "Eastern Standard Time",
+						"schedule": {}
 					}
 				}
 			},
