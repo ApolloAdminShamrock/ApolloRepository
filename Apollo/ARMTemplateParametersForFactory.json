@@ -38,10 +38,16 @@
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"LSCUST360_connectionString": {
+			"value": ""
+		},
 		"NewCSV_connectionString": {
 			"value": ""
 		},
 		"RESULTS_LinkedService_secretAccessKey": {
+			"value": ""
+		},
+		"SqlServer Staging to Cust360_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_connectionString": {

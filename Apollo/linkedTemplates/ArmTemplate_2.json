@@ -6,12 +6,80 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "Apollo"
+		},
+		"dwbmirls_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'dwbmirls'"
+		},
+		"dwgmirls_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'dwgmirls'"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/TDS_GYRO')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureFileStorageGYRO",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureFileStorageLocation",
+						"fileName": "Cust_TDSGyroDet.csv",
+						"folderPath": "input"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dwbmirls')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('dwbmirls_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "IRDW2014",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dwgmirls')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('dwgmirls_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "IRDW2014",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/Apollo Multi _DIM Pipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
@@ -654,10 +722,75 @@
 				"annotations": [],
 				"lastPublishTime": "2022-01-19T13:41:29Z"
 			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/TDS_GYRO')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Load Cloud_360 Customer_DIM from Staging ONLY')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "StagingCustDimToCloud360CustDim",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "SqlServerSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SqlServerTablestagingdim",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "CustDIM360",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"annotations": []
+			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Test Load Staging ONLY')]",
+			"name": "[concat(parameters('factoryName'), '/Test Load Product Staging ONLY')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -840,7 +973,9 @@
 					"table": "vw_FDAStatusReport"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/dwbmirls')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/pipeline1')]",

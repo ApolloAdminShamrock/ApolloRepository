@@ -51,6 +51,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
+		"LSCUST360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LSCUST360'"
+		},
 		"NewCSV_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'NewCSV'"
@@ -58,6 +62,10 @@
 		"RESULTS_LinkedService_secretAccessKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'secretAccessKey' of 'RESULTS_LinkedService'"
+		},
+		"SqlServer Staging to Cust360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer Staging to Cust360'"
 		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
@@ -159,11 +167,17 @@
 					"AzureStorageLinkedService_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
 					},
+					"LSCUST360_connectionString": {
+						"value": "[parameters('LSCUST360_connectionString')]"
+					},
 					"NewCSV_connectionString": {
 						"value": "[parameters('NewCSV_connectionString')]"
 					},
 					"RESULTS_LinkedService_secretAccessKey": {
 						"value": "[parameters('RESULTS_LinkedService_secretAccessKey')]"
+					},
+					"SqlServer Staging to Cust360_connectionString": {
+						"value": "[parameters('SqlServer Staging to Cust360_connectionString')]"
 					},
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
@@ -182,9 +196,6 @@
 					},
 					"RESULTS_LinkedService_properties_typeProperties_accessKeyId": {
 						"value": "[parameters('RESULTS_LinkedService_properties_typeProperties_accessKeyId')]"
-					},
-					"T_Results_File_Drop_properties_typeProperties_scope": {
-						"value": "[parameters('T_Results_File_Drop_properties_typeProperties_scope')]"
 					}
 				}
 			},
@@ -204,11 +215,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"dwbmirls_connectionString": {
-						"value": "[parameters('dwbmirls_connectionString')]"
-					},
-					"dwgmirls_connectionString": {
-						"value": "[parameters('dwgmirls_connectionString')]"
+					"T_Results_File_Drop_properties_typeProperties_scope": {
+						"value": "[parameters('T_Results_File_Drop_properties_typeProperties_scope')]"
 					},
 					"drop_properties_typeProperties_scope": {
 						"value": "[parameters('drop_properties_typeProperties_scope')]"
@@ -232,6 +240,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"dwbmirls_connectionString": {
+						"value": "[parameters('dwbmirls_connectionString')]"
+					},
+					"dwgmirls_connectionString": {
+						"value": "[parameters('dwgmirls_connectionString')]"
 					}
 				}
 			},

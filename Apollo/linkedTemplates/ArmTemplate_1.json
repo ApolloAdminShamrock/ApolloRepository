@@ -7,13 +7,9 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "Apollo"
 		},
-		"dwbmirls_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'dwbmirls'"
-		},
-		"dwgmirls_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'dwgmirls'"
+		"T_Results_File_Drop_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock"
 		},
 		"drop_properties_typeProperties_scope": {
 			"type": "string",
@@ -24,6 +20,48 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/TTuesday')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2021-12-07T15:15:00",
+						"endTime": "2021-12-07T16:16:00",
+						"timeZone": "Eastern Standard Time"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/T_Results_File_Drop')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipelines": [],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/apollocontainer/blobs/results",
+					"blobPathEndsWith": ".csv",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('T_Results_File_Drop_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/T_StagingTo360')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
@@ -218,6 +256,244 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "Cust_TDSGyroDet"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CustDIM360')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "LSCUST360",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "RECID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GMAccountno",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GMRecid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ShipToNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "NationalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RegionalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GlobalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Source",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address2",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address3",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address4",
+						"type": "nvarchar"
+					},
+					{
+						"name": "City",
+						"type": "nvarchar"
+					},
+					{
+						"name": "State",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZIP",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Country",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Contact",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Phone",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Fax",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Salesman",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Salesman No",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Sales Channel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bus Unit",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Industry",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Industry Mgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Mkt Mgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Application",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CMPNY",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Obsoleted",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ShipToType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LocationName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Location Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "NationalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RegionalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GlobalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EffectiveSalesman",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EffectiveCountry",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Tier",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Contact Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Longitude",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Latitude",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "GMOwnership",
+						"type": "nchar"
+					},
+					{
+						"name": "RecordCurtainingLevel",
+						"type": "nchar"
+					},
+					{
+						"name": "RowStatus",
+						"type": "nchar"
+					},
+					{
+						"name": "RowChangeReason",
+						"type": "nchar"
+					},
+					{
+						"name": "InitialLoadSystem",
+						"type": "nchar"
+					},
+					{
+						"name": "LastChangeSystem",
+						"type": "nchar"
+					},
+					{
+						"name": "RecordEffectiveStartDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "RecordEffectiveEndDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "RecordStatus",
+						"type": "nchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "Customer_DIM"
 				}
 			},
 			"dependsOn": []
@@ -505,7 +781,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "SqlServerstdim",
+					"referenceName": "SqlServer Staging to Cust360",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -513,7 +789,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Product_DIM"
+					"table": "Customer_DIM"
 				}
 			},
 			"dependsOn": []
@@ -536,70 +812,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/TDS_GYRO')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureFileStorageGYRO",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureFileStorageLocation",
-						"fileName": "Cust_TDSGyroDet.csv",
-						"folderPath": "input"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": []
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dwbmirls')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('dwbmirls_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "IRDW2014",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/IRDW2014')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/dwgmirls')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"connectionString": "[parameters('dwgmirls_connectionString')]"
-				},
-				"connectVia": {
-					"referenceName": "IRDW2014",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/IRDW2014')]"
-			]
 		}
 	]
 }

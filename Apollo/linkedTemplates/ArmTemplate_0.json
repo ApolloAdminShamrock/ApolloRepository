@@ -51,6 +51,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
+		"LSCUST360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LSCUST360'"
+		},
 		"NewCSV_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'NewCSV'"
@@ -58,6 +62,10 @@
 		"RESULTS_LinkedService_secretAccessKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'secretAccessKey' of 'RESULTS_LinkedService'"
+		},
+		"SqlServer Staging to Cust360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer Staging to Cust360'"
 		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
@@ -82,10 +90,6 @@
 		"RESULTS_LinkedService_properties_typeProperties_accessKeyId": {
 			"type": "string",
 			"defaultValue": "ApolloAdmin"
-		},
-		"T_Results_File_Drop_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock"
 		}
 	},
 	"variables": {
@@ -238,6 +242,19 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/LSCUST360')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('LSCUST360_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/NewCSV')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -266,6 +283,19 @@
 						"value": "[parameters('RESULTS_LinkedService_secretAccessKey')]"
 					},
 					"authenticationType": "AccessKey"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer Staging to Cust360')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer Staging to Cust360_connectionString')]"
 				}
 			},
 			"dependsOn": []
@@ -331,48 +361,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('new LSBlob_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/TTuesday')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Hour",
-						"interval": 1,
-						"startTime": "2021-12-07T15:15:00",
-						"endTime": "2021-12-07T16:16:00",
-						"timeZone": "Eastern Standard Time"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/T_Results_File_Drop')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/apollocontainer/blobs/results",
-					"blobPathEndsWith": ".csv",
-					"ignoreEmptyBlobs": true,
-					"scope": "[parameters('T_Results_File_Drop_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobCreated"
-					]
 				}
 			},
 			"dependsOn": []

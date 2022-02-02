@@ -51,6 +51,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
+		"LSCUST360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LSCUST360'"
+		},
 		"NewCSV_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'NewCSV'"
@@ -58,6 +62,10 @@
 		"RESULTS_LinkedService_secretAccessKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'secretAccessKey' of 'RESULTS_LinkedService'"
+		},
+		"SqlServer Staging to Cust360_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer Staging to Cust360'"
 		},
 		"SqlServer1_connectionString": {
 			"type": "secureString",
@@ -803,6 +811,72 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/Load Cloud_360 Customer_DIM from Staging ONLY')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "StagingCustDimToCloud360CustDim",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "SqlServerSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SqlServerTablestagingdim",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "CustDIM360",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SqlServerTablestagingdim')]",
+				"[concat(variables('factoryId'), '/datasets/CustDIM360')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SCD ONLY')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -840,7 +914,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Test Load Staging ONLY')]",
+			"name": "[concat(parameters('factoryName'), '/Test Load Product Staging ONLY')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1058,6 +1132,246 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase3')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CustDIM360')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "LSCUST360",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "RECID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GMAccountno",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GMRecid",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ShipToNo",
+						"type": "nvarchar"
+					},
+					{
+						"name": "NationalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RegionalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GlobalOrgID",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Source",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CustomerName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address2",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address3",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Address4",
+						"type": "nvarchar"
+					},
+					{
+						"name": "City",
+						"type": "nvarchar"
+					},
+					{
+						"name": "State",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ZIP",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Country",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Contact",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Phone",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Fax",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Salesman",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Salesman No",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Sales Channel",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Bus Unit",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Industry",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Industry Mgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Mkt Mgr",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Application",
+						"type": "nvarchar"
+					},
+					{
+						"name": "CMPNY",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Obsoleted",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ShipToType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "LocationName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Location Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "NationalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "RegionalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "GlobalName",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EffectiveSalesman",
+						"type": "nvarchar"
+					},
+					{
+						"name": "EffectiveCountry",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Tier",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Contact Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Longitude",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Latitude",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "GMOwnership",
+						"type": "nchar"
+					},
+					{
+						"name": "RecordCurtainingLevel",
+						"type": "nchar"
+					},
+					{
+						"name": "RowStatus",
+						"type": "nchar"
+					},
+					{
+						"name": "RowChangeReason",
+						"type": "nchar"
+					},
+					{
+						"name": "InitialLoadSystem",
+						"type": "nchar"
+					},
+					{
+						"name": "LastChangeSystem",
+						"type": "nchar"
+					},
+					{
+						"name": "RecordEffectiveStartDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "RecordEffectiveEndDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					},
+					{
+						"name": "RecordStatus",
+						"type": "nchar"
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "Customer_DIM"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/LSCUST360')]"
 			]
 		},
 		{
@@ -1413,7 +1727,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "SqlServerstdim",
+					"referenceName": "SqlServer Staging to Cust360",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -1421,11 +1735,11 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Product_DIM"
+					"table": "Customer_DIM"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/SqlServerstdim')]"
+				"[concat(variables('factoryId'), '/linkedServices/SqlServer Staging to Cust360')]"
 			]
 		},
 		{
@@ -1623,6 +1937,19 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/LSCUST360')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('LSCUST360_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/NewCSV')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -1651,6 +1978,19 @@
 						"value": "[parameters('RESULTS_LinkedService_secretAccessKey')]"
 					},
 					"authenticationType": "AccessKey"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer Staging to Cust360')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer Staging to Cust360_connectionString')]"
 				}
 			},
 			"dependsOn": []
