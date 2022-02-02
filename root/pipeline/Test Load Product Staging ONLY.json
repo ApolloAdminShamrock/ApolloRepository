@@ -1,5 +1,5 @@
 {
-	"name": "Test Load Staging ONLY",
+	"name": "Test Load Product Staging ONLY",
 	"properties": {
 		"activities": [
 			{

@@ -2,7 +2,7 @@
 	"name": "SqlServerTablestagingdim",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SqlServerstdim",
+			"referenceName": "SqlServer Staging to Cust360",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Product_DIM"
+			"table": "Customer_DIM"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
