@@ -1,9 +1,9 @@
 {
-	"name": "SCD ONLY",
+	"name": "Errors ONLY",
 	"properties": {
 		"activities": [
 			{
-				"name": "SCD_sp",
+				"name": "Stored Procedure ExceptionsErrors",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [],
 				"policy": {
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[sp_INSERT_SCD_DIM]"
+					"storedProcedureName": "[dbo].[sp_INSERT_JOINED_ROWS_INTO_PRODUCT_DIM]"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureSqlDatabaseLinkedService",
