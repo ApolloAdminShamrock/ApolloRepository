@@ -789,7 +789,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
-					"table": "Customer_DIM"
+					"table": "Product_DIM"
 				}
 			},
 			"dependsOn": []
