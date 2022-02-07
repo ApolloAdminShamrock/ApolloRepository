@@ -629,6 +629,59 @@
 							"referenceName": "AzureSqlDatabaseLinkedService",
 							"type": "LinkedServiceReference"
 						}
+					},
+					{
+						"name": "StagingPRDimToCloud360PRDim",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "Stored Procedure",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "SqlServerSource",
+								"queryTimeout": "02:00:00",
+								"partitionOption": "None"
+							},
+							"sink": {
+								"type": "AzureSqlSink"
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"typeConversion": true,
+								"typeConversionSettings": {
+									"allowDataTruncation": true,
+									"treatBooleanAsNumber": false
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SqlServerTablestagingdim",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Product360",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"policy": {
@@ -643,7 +696,9 @@
 				"[concat(variables('factoryId'), '/datasets/SqlServerTableRES')]",
 				"[concat(variables('factoryId'), '/datasets/InMastCSV')]",
 				"[concat(variables('factoryId'), '/datasets/StagingSQLData')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]",
+				"[concat(variables('factoryId'), '/datasets/SqlServerTablestagingdim')]",
+				"[concat(variables('factoryId'), '/datasets/Product360')]"
 			]
 		},
 		{
