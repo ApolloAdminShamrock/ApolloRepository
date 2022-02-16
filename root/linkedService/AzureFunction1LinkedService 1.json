@@ -7,8 +7,8 @@
 		"typeProperties": {
 			"functionAppUrl": "https://apollopipelineprocess.azurewebsites.net",
 			"authentication": "MSI",
-			"resourceId": "AF1",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdEQzlCMDNFLTNEODMtNEFGQi1CM0Q4LTRFOUYxNzUxNDI2RV8zMWY0ZDQwMC0zZTJjLTQyNzEtOTI2Mi01OGIxMTYyZTc1MmIiDQp9"
+			"resourceId": "ApolloFunctionForPipeline",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdEQzlCMDNFLTNEODMtNEFGQi1CM0Q4LTRFOUYxNzUxNDI2RV85ZDM1NTk5NS05OTRkLTQzMWYtYjgyOS1mZGQ0Yjg5YjdlNDEiDQp9"
 		}
 	}
 }
