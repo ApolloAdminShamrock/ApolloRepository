@@ -188,6 +188,41 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ApolloPipelineProcess",
+				"type": "AzureFunctionActivity",
+				"dependsOn": [
+					{
+						"activity": "Stored Procedure",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "StagingPRDimToCloud360PRDim",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"functionName": "ApolloPipelineProcess",
+					"method": "POST",
+					"body": "Pipeline Failed"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureFunction1LinkedService 1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": [],
