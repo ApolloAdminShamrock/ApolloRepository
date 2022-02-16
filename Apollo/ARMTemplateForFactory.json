@@ -227,7 +227,14 @@
 					{
 						"name": "Stored Procedure Product_DIM",
 						"type": "SqlServerStoredProcedure",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "ProdCopy RES csv to Staging",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -393,26 +400,7 @@
 					{
 						"name": "Stored Procedure ExceptionsErrors",
 						"type": "SqlServerStoredProcedure",
-						"dependsOn": [
-							{
-								"activity": "StagingSalesDimToCloud360PRDim_copy1_copy1",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							},
-							{
-								"activity": "StagingCustDimToCloud360PRDim_copy1",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							},
-							{
-								"activity": "StagingPRDimToCloud360PRDim",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -432,26 +420,7 @@
 					{
 						"name": "SCD_sp",
 						"type": "SqlServerStoredProcedure",
-						"dependsOn": [
-							{
-								"activity": "StagingCustDimToCloud360PRDim_copy1",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							},
-							{
-								"activity": "StagingSalesDimToCloud360PRDim_copy1_copy1",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							},
-							{
-								"activity": "StagingPRDimToCloud360PRDim",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
