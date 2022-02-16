@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureFileStorageGYRO'"
 		},
+		"AzureFunction1LinkedService 1_functionKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'functionKey' of 'AzureFunction1LinkedService 1'"
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
@@ -83,9 +87,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'irblob'"
 		},
-		"new LSBlob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'new LSBlob'"
+		"AzureFunction1LinkedService 1_properties_typeProperties_functionAppUrl": {
+			"type": "string",
+			"defaultValue": "https://apollopipelineprocess.azurewebsites.net"
 		},
 		"RESULTS_LinkedService_properties_typeProperties_accessKeyId": {
 			"type": "string",
@@ -133,6 +137,25 @@
 				"typeProperties": {
 					"connectionString": "[parameters('AzureFileStorageGYRO_connectionString')]",
 					"fileShare": "results"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureFunction1LinkedService 1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureFunction",
+				"typeProperties": {
+					"functionAppUrl": "[parameters('AzureFunction1LinkedService 1_properties_typeProperties_functionAppUrl')]",
+					"functionKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureFunction1LinkedService 1_functionKey')]"
+					},
+					"authentication": "MSI",
+					"resourceId": "ApolloFunctionForPipeline"
 				}
 			},
 			"dependsOn": []
@@ -348,19 +371,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('irblob_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/new LSBlob')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('new LSBlob_connectionString')]"
 				}
 			},
 			"dependsOn": []

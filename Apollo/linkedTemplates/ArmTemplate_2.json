@@ -21,6 +21,25 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/StagingSQLData')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabaseLinkedService",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "INMAST"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/TDS_GYRO')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -613,6 +632,42 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "ApolloPipelineProcess",
+						"type": "AzureFunctionActivity",
+						"dependsOn": [
+							{
+								"activity": "Stored Procedure",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							},
+							{
+								"activity": "StagingPRDimToCloud360PRDim",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"functionName": "ApolloPipelineProcess",
+							"method": "POST",
+							"headers": {},
+							"body": "Pipeline Failed"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureFunction1LinkedService 1",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
@@ -622,7 +677,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-01-25T16:03:55Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/StagingSQLData')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/GYRO Only')]",
@@ -884,7 +941,9 @@
 				},
 				"annotations": []
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/StagingSQLData')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
@@ -1009,7 +1068,8 @@
 				"lastPublishTime": "2022-01-27T17:06:04Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/SqlServerTable1')]"
+				"[concat(variables('factoryId'), '/datasets/SqlServerTable1')]",
+				"[concat(variables('factoryId'), '/datasets/StagingSQLData')]"
 			]
 		},
 		{

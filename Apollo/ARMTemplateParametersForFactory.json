@@ -14,6 +14,9 @@
 		"AzureFileStorageGYRO_connectionString": {
 			"value": ""
 		},
+		"AzureFunction1LinkedService 1_functionKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
@@ -70,6 +73,9 @@
 		},
 		"new LSBlob_connectionString": {
 			"value": ""
+		},
+		"AzureFunction1LinkedService 1_properties_typeProperties_functionAppUrl": {
+			"value": "https://apollopipelineprocess.azurewebsites.net"
 		},
 		"RESULTS_LinkedService_properties_typeProperties_accessKeyId": {
 			"value": "ApolloAdmin"

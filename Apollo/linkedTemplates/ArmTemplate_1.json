@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "Apollo"
 		},
+		"new LSBlob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'new LSBlob'"
+		},
 		"T_Results_File_Drop_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock"
@@ -20,6 +24,19 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/new LSBlob')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('new LSBlob_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/TTuesday')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
@@ -790,25 +807,6 @@
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "Product_DIM"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/StagingSQLData')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabaseLinkedService",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "INMAST"
 				}
 			},
 			"dependsOn": []
