@@ -661,15 +661,9 @@
 						]
 					},
 					{
-						"name": "ApolloPipelineProcess",
-						"type": "AzureFunctionActivity",
+						"name": "SendEmail",
+						"type": "WebActivity",
 						"dependsOn": [
-							{
-								"activity": "Stored Procedure",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							},
 							{
 								"activity": "StagingPRDimToCloud360PRDim",
 								"dependencyConditions": [
@@ -686,14 +680,13 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"functionName": "ApolloPipelineProcess",
+							"url": "https://prod-08.northcentralus.logic.azure.com:443/workflows/9540f649d28b4c6788f50af5564cbb34/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1HgxDB5FwUh_YxIdo-vACQpw2OORfD5wTx4QBN7NzhE",
 							"method": "POST",
 							"headers": {},
-							"body": "Pipeline Failed"
-						},
-						"linkedServiceName": {
-							"referenceName": "AzureFunction1LinkedService 1",
-							"type": "LinkedServiceReference"
+							"body": {
+								"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\"\n}",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -711,8 +704,7 @@
 				"[concat(variables('factoryId'), '/datasets/StagingSQLData')]",
 				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]",
 				"[concat(variables('factoryId'), '/datasets/SqlServerTablestagingdim')]",
-				"[concat(variables('factoryId'), '/datasets/Product360')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureFunction1LinkedService 1')]"
+				"[concat(variables('factoryId'), '/datasets/Product360')]"
 			]
 		},
 		{
