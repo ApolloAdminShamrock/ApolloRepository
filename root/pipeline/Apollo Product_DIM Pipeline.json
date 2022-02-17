@@ -190,15 +190,9 @@
 				]
 			},
 			{
-				"name": "ApolloPipelineProcess",
-				"type": "AzureFunctionActivity",
+				"name": "SendEmail",
+				"type": "WebActivity",
 				"dependsOn": [
-					{
-						"activity": "Stored Procedure",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					},
 					{
 						"activity": "StagingPRDimToCloud360PRDim",
 						"dependencyConditions": [
@@ -213,16 +207,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
-				"typeProperties": {
-					"functionName": "ApolloPipelineProcess",
-					"method": "POST",
-					"body": "Pipeline Failed"
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureFunction1LinkedService 1",
-					"type": "LinkedServiceReference"
-				}
+				"userProperties": []
 			}
 		],
 		"annotations": [],
