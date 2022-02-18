@@ -717,7 +717,7 @@
 								"Content-Type": "application/json"
 							},
 							"body": {
-								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"@{activity('StagingPRDimToCloud360PRDim').output}\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\"\n}",
+								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"Status\": \"Pipeline Run Successful\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\"\n}",
 								"type": "Expression"
 							}
 						}
