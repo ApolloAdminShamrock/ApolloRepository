@@ -246,7 +246,7 @@
 						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "activity('StagingPRDimToCloud360PRDim').outputactivity('StagingPRDimToCloud360PRDim').output{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.DataRead}\"\n}",
+						"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.RowRead}\"\n}",
 						"type": "Expression"
 					}
 				}
