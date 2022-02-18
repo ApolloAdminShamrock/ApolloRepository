@@ -610,14 +610,7 @@
 					{
 						"name": "StagingPRDimToCloud360PRDim",
 						"type": "Copy",
-						"dependsOn": [
-							{
-								"activity": "Stored Procedure",
-								"dependencyConditions": [
-									"Succeeded"
-								]
-							}
-						],
+						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -665,7 +658,7 @@
 						"type": "WebActivity",
 						"dependsOn": [
 							{
-								"activity": "StagingPRDimToCloud360PRDim",
+								"activity": "Stored Procedure",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -684,7 +677,7 @@
 							"method": "POST",
 							"headers": {},
 							"body": {
-								"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
+								"value": "{\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
 								"type": "Expression"
 							}
 						}
