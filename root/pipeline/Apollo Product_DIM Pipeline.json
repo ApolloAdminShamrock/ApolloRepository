@@ -212,7 +212,7 @@
 					"url": "https://prod-08.northcentralus.logic.azure.com:443/workflows/9540f649d28b4c6788f50af5564cbb34/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1HgxDB5FwUh_YxIdo-vACQpw2OORfD5wTx4QBN7NzhE",
 					"method": "POST",
 					"body": {
-						"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"\"\n}",
+						"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
 						"type": "Expression"
 					}
 				}
