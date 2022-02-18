@@ -684,7 +684,7 @@
 							"method": "POST",
 							"headers": {},
 							"body": {
-								"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"\"\n}",
+								"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
 								"type": "Expression"
 							}
 						}
