@@ -690,7 +690,7 @@
 								"Content-Type": "application/json"
 							},
 							"body": {
-								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"Status\": \"Pipeline Run Successful\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\"\n}",
+								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"Status\": \"Pipeline Run Successful\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.RowsRead}\"\n}",
 								"type": "Expression"
 							}
 						}
