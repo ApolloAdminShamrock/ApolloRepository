@@ -141,14 +141,7 @@
 			{
 				"name": "StagingPRDimToCloud360PRDim",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Stored Procedure",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -194,7 +187,7 @@
 				"type": "WebActivity",
 				"dependsOn": [
 					{
-						"activity": "StagingPRDimToCloud360PRDim",
+						"activity": "Stored Procedure",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -212,7 +205,7 @@
 					"url": "https://prod-08.northcentralus.logic.azure.com:443/workflows/9540f649d28b4c6788f50af5564cbb34/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1HgxDB5FwUh_YxIdo-vACQpw2OORfD5wTx4QBN7NzhE",
 					"method": "POST",
 					"body": {
-						"value": "{\n\"title\": \"PIPELINE RUN FINISHED\",\n\"message\": \"TESTING PIPELINE Finished Sucessfully EMAIL\",\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
+						"value": "{\n\"color\": \"GREEN\",\n\"dataFactoryName\": \"@{pipeline().DataFactory}\",\n\"pipelineName\": \"@{pipeline().Pipeline}\",\n\"pipelineRunId\": \"@{pipeline().RunId}\",\n\"time\": \"utcnow()\"\n}",
 						"type": "Expression"
 					}
 				}
