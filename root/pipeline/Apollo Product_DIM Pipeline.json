@@ -246,7 +246,7 @@
 						"Content-Type": "application/json"
 					},
 					"body": {
-						"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsRead}\"\n}",
+						"value": "{\n\"title\": \"Apollo Pipeline Run Finished!\",\n\"Message\": \"Apollo daily pipeline run has completed with no errors to report.\",\n\"color\": \"Green\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"time\": \"@{utcnow()}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsRead}\"\n}",
 						"type": "Expression"
 					}
 				}
