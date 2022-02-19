@@ -717,7 +717,7 @@
 								"Content-Type": "application/json"
 							},
 							"body": {
-								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsRead}\"\n}",
+								"value": "{\n\"title\": \"Apollo Pipeline Run Finished!\",\n\"Message\": \"Apollo daily pipeline run has completed with no errors to report.\",\n\"color\": \"Green\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"time\": \"@{utcnow()}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsRead}\"\n}",
 								"type": "Expression"
 							}
 						}
@@ -2209,7 +2209,7 @@
 					"recurrence": {
 						"frequency": "Day",
 						"interval": 1,
-						"startTime": "2022-01-13T05:00:00",
+						"startTime": "2022-02-19T05:00:00",
 						"timeZone": "Eastern Standard Time",
 						"schedule": {}
 					}
