@@ -717,7 +717,7 @@
 								"Content-Type": "application/json"
 							},
 							"body": {
-								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsCopied}\"\n}",
+								"value": "{\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"ErrorMessage\": \"\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"Rows Processed for Product_DIM\": \"@{activity('StagingPRDimToCloud360PRDim').output.rowsRead}\"\n}",
 								"type": "Expression"
 							}
 						}
@@ -2194,7 +2194,7 @@
 			"properties": {
 				"description": "Daily Product_DIM Production Run",
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -2210,7 +2210,8 @@
 						"frequency": "Day",
 						"interval": 1,
 						"startTime": "2022-01-13T05:00:00",
-						"timeZone": "Eastern Standard Time"
+						"timeZone": "Eastern Standard Time",
+						"schedule": {}
 					}
 				}
 			},
