@@ -938,6 +938,37 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Apollo Pipeline SCD Column Changed",
+						"type": "WebActivity",
+						"dependsOn": [
+							{
+								"activity": "ProdCopy BM csv to Staging",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"url": "https://prod-08.northcentralus.logic.azure.com:443/workflows/9540f649d28b4c6788f50af5564cbb34/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1HgxDB5FwUh_YxIdo-vACQpw2OORfD5wTx4QBN7NzhE",
+							"method": "POST",
+							"headers": {
+								"Content-Type": "application/json"
+							},
+							"body": {
+								"value": "{\n\"title\": \"Apollo Type II Data Column Changed Value!\",\n\"Message\": \"Apollo Type II Data Column Values have Changed!\",\n\"color\": \"BLUE\",\n\"DataFactoryName\": \"@{pipeline().DataFactory}\",\n\"PipelineName\": \"@{pipeline().Pipeline}\",\n\"RunId\": \"@{pipeline().RunId}\",\n\"time\": \"@{utcnow()}\",\n\"SCD Updates for Product_DIM\": \"\"@{activity('ProdCopy RES csv to Staging').output.rowsRead}\"\n}",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"policy": {
