@@ -7,7 +7,7 @@
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
-						"activity": "Copy data2",
+						"activity": "InMast csv COPY",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -143,7 +143,7 @@
 				}
 			},
 			{
-				"name": "Copy data1",
+				"name": "RESULTS csv COPY",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -195,11 +195,11 @@
 				]
 			},
 			{
-				"name": "Copy data2",
+				"name": "InMast csv COPY",
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Copy data1",
+						"activity": "RESULTS csv COPY",
 						"dependencyConditions": [
 							"Succeeded"
 						]
