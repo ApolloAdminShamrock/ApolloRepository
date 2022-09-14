@@ -1,0 +1,72 @@
+{
+	"name": "DW2014VertegenDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DW2014VertegenLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "KODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMPERC",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MINPERCKORT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ADRES1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAND",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GEMEENTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TELEFOON1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TELEFAX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARCHIEF",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VERTEGEN"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

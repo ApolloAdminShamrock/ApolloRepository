@@ -1,0 +1,16 @@
+{
+	"name": "OdbcArttel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OdbcArttelLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"ARTTEL\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

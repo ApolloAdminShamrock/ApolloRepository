@@ -1,0 +1,82 @@
+{
+	"name": "DW2014ArttelDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DW2014ArttelLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VOORRRES",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VOORRAAD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INBACKLEV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INBACKKLA",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CONSIGN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MAGCTRL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "RAAMCONTR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INPROD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OPAFLEVER",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GEMAKWAARDE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VERZLEV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VOORZPROD",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ARTTEL"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

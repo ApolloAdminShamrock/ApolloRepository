@@ -1,0 +1,359 @@
+{
+	"name": "DWARCHAFLDDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DWARCHAFLDLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "AFLEVERBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AFLEVERNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LIJNNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TYPELN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TYPELNINDEX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTIKEL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BENAMING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANTAL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "STDPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KORTING1",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KORTING2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "EENHPR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTAAL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BTWKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERKREK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAGAZIJN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROJECT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EENHPRIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTAALIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VALUTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KODEFC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KLANT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EENHPRINCL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "EENHPRINCLIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KOSTPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KOSTPRIJSIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AKWAARDE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KODESAMENST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "STFAKT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GEHELEN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ONDERDELEN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DAGBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BOEKJAAR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "FAKTNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "FAKTDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERVDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORDERBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORDERNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ORDERTPLN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORDERLIJN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OFFERTEBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OFFERTENR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OFFERTELIJN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OFFERTETPLN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORDVOLLEDIG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COLLIS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PALETTEN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "HISTDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HISTORIEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMPERC",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "COMMISSIEIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTCOMIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GOEDCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MASSAKG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AANVEENH",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PRINTETIK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ETIKGEPRINT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "SOORTPRIJS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REFVORD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REFNACALC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GNBONKORTING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISHERST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ANP1N1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ANP1N2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ANP2N1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ANP2N2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UITVOORRAAD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UITVDAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HFDARTLIJNNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BKMVOLGNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BKMGEDRAG",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STDPRIJSINCL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LANDORI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OMSCHR",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "AFLEVERD_ARCHIVE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

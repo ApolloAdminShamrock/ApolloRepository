@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerTablestagingdim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BMIRLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INMAST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

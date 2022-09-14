@@ -1,0 +1,69 @@
+{
+	"name": "BRinv360",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BRINV360LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PRODUCT CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT LINE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT GRADE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSE CODE",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "WHSE NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSE ON-HAND",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSE MIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SnapShotDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "DataUpdateDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Source",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_Inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

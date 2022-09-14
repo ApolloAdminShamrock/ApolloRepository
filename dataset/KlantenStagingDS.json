@@ -1,0 +1,322 @@
+{
+	"name": "KlantenStagingDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "KlantenStagingLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NUMMER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANSPREK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAND",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GEMEENTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TELEFOON1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TELEFOON2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TELEFAX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "URL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TAALKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BTWREGIME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BTWNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKNAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKADRES1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKADRES2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKPLAATS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERTEGENW",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GROEP1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GROEP2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GROEP3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MANINGEN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOMICIL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KREDLIMIET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BETVOORW",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VALUTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISSTDBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STDBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TEGENBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRIJSCAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KORTING1",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KORTING2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "FACTPERBON",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TEKST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KORTCONT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GLOBKORT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CENTRREKNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MELDING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZNDIVK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FACTKLANT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "METADMKOST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREADATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREAUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREAUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZDATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "WIJZUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOMBANKNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ALTCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZNDKLKRT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SLA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERLTAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VRIJBEROEP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DAGBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FACTAFDRUK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GOEDKEURDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "GOEDKEURNAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GLNCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MANDAAT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ELEKTRONISCH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ELEKTRTYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARCHIEF",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CWALERT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BETALINGWEB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROVIDER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROVIDERTYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTICIPANT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BELGIANGOV",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "KLANTEN"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

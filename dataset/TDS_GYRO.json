@@ -1,0 +1,24 @@
+{
+	"name": "TDS_GYRO",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Gyro File",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "Cust_TDSGyroDet.csv",
+				"folderPath": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

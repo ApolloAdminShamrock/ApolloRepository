@@ -1,0 +1,57 @@
+{
+	"name": "Inventory_WHSE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InventoryAzureFileStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "PRODUCT_WHSE_ONHAND.CSV",
+				"folderPath": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PRODUCT CODE",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT NAME",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT TYPE",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT LINE",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT GRADE",
+				"type": "String"
+			},
+			{
+				"name": "WHSE CODE",
+				"type": "String"
+			},
+			{
+				"name": "WHSE NAME",
+				"type": "String"
+			},
+			{
+				"name": "WHSE ON-HAND",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

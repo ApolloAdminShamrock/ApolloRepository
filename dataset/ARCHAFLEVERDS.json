@@ -1,0 +1,341 @@
+{
+	"name": "ARCHAFLEVERDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ARCHAFLEVERLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "Aflever_ARCHIVE",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "AF",
+				"type": "String"
+			},
+			{
+				"name": "20972",
+				"type": "String"
+			},
+			{
+				"name": "F",
+				"type": "String"
+			},
+			{
+				"name": "2017-01-053",
+				"type": "String"
+			},
+			{
+				"name": "LACK001",
+				"type": "String"
+			},
+			{
+				"name": "05",
+				"type": "String"
+			},
+			{
+				"name": "Magni Europe GmbH & Co KG",
+				"type": "String"
+			},
+			{
+				"name": "Prop_7",
+				"type": "String"
+			},
+			{
+				"name": "Heinkelstrasse 21",
+				"type": "String"
+			},
+			{
+				"name": "Postfach 15 29",
+				"type": "String"
+			},
+			{
+				"name": "D",
+				"type": "String"
+			},
+			{
+				"name": "73614",
+				"type": "String"
+			},
+			{
+				"name": "Schorndorf",
+				"type": "String"
+			},
+			{
+				"name": "EUR",
+				"type": "String"
+			},
+			{
+				"name": "1.0",
+				"type": "String"
+			},
+			{
+				"name": "I15",
+				"type": "String"
+			},
+			{
+				"name": "Prop_16",
+				"type": "String"
+			},
+			{
+				"name": "A",
+				"type": "String"
+			},
+			{
+				"name": "0.018",
+				"type": "String"
+			},
+			{
+				"name": "0.019",
+				"type": "String"
+			},
+			{
+				"name": "0.020",
+				"type": "String"
+			},
+			{
+				"name": "0.021",
+				"type": "String"
+			},
+			{
+				"name": "0.022",
+				"type": "String"
+			},
+			{
+				"name": "0.023",
+				"type": "String"
+			},
+			{
+				"name": "0.024",
+				"type": "String"
+			},
+			{
+				"name": "0.025",
+				"type": "String"
+			},
+			{
+				"name": "0.026",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1527",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1528",
+				"type": "String"
+			},
+			{
+				"name": "VJ29",
+				"type": "String"
+			},
+			{
+				"name": "MW",
+				"type": "String"
+			},
+			{
+				"name": "3",
+				"type": "String"
+			},
+			{
+				"name": "Prop_32",
+				"type": "String"
+			},
+			{
+				"name": "Prop_33",
+				"type": "String"
+			},
+			{
+				"name": "034",
+				"type": "String"
+			},
+			{
+				"name": "035",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1536",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1537",
+				"type": "String"
+			},
+			{
+				"name": "I38",
+				"type": "String"
+			},
+			{
+				"name": "0.039",
+				"type": "String"
+			},
+			{
+				"name": "0.040",
+				"type": "String"
+			},
+			{
+				"name": "Prop_41",
+				"type": "String"
+			},
+			{
+				"name": "0.042",
+				"type": "String"
+			},
+			{
+				"name": "0.043",
+				"type": "String"
+			},
+			{
+				"name": "044",
+				"type": "String"
+			},
+			{
+				"name": "Prop_45",
+				"type": "String"
+			},
+			{
+				"name": "0.046",
+				"type": "String"
+			},
+			{
+				"name": "0.047",
+				"type": "String"
+			},
+			{
+				"name": "0.048",
+				"type": "String"
+			},
+			{
+				"name": "0.049",
+				"type": "String"
+			},
+			{
+				"name": "0.050",
+				"type": "String"
+			},
+			{
+				"name": "0.051",
+				"type": "String"
+			},
+			{
+				"name": "0.052",
+				"type": "String"
+			},
+			{
+				"name": "153",
+				"type": "String"
+			},
+			{
+				"name": "DE",
+				"type": "String"
+			},
+			{
+				"name": "0.055",
+				"type": "String"
+			},
+			{
+				"name": "0.056",
+				"type": "String"
+			},
+			{
+				"name": "157",
+				"type": "String"
+			},
+			{
+				"name": "Prop_58",
+				"type": "String"
+			},
+			{
+				"name": "Prop_59",
+				"type": "String"
+			},
+			{
+				"name": "2017-01-0560",
+				"type": "String"
+			},
+			{
+				"name": "145961",
+				"type": "String"
+			},
+			{
+				"name": "VJ62",
+				"type": "String"
+			},
+			{
+				"name": "2017-01-0563",
+				"type": "String"
+			},
+			{
+				"name": "145964",
+				"type": "String"
+			},
+			{
+				"name": "VJ65",
+				"type": "String"
+			},
+			{
+				"name": "Prop_66",
+				"type": "String"
+			},
+			{
+				"name": "067",
+				"type": "String"
+			},
+			{
+				"name": "Prop_68",
+				"type": "String"
+			},
+			{
+				"name": "Prop_69",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1570",
+				"type": "String"
+			},
+			{
+				"name": "N",
+				"type": "String"
+			},
+			{
+				"name": "Prop_72",
+				"type": "String"
+			},
+			{
+				"name": "Prop_73",
+				"type": "String"
+			},
+			{
+				"name": "30",
+				"type": "String"
+			},
+			{
+				"name": "Prop_75",
+				"type": "String"
+			},
+			{
+				"name": "Prop_76",
+				"type": "String"
+			},
+			{
+				"name": "1582-10-1577",
+				"type": "String"
+			},
+			{
+				"name": "Prop_78",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

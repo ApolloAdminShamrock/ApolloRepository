@@ -1,0 +1,29 @@
+{
+	"name": "ARCHAFLDDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ARCHAFLDLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "Afleverd_ARCHIVE",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "\"AFLEVERBK\"\t\"AFLEVERNR\"\t\"LIJNNR\"\t\"TYPELN\"\t\"TYPELNINDEX\"\t\"ARTIKEL\"\t\"BENAMING\"\t\"AANTAL\"\t\"STDPRIJS\"\t\"KORTING1\"\t\"KORTING2\"\t\"EENHPR\"\t\"TOTAAL\"\t\"BTWKODE\"\t\"VERKREK\"\t\"MAGAZIJN\"\t\"PROJECT\"\t\"EENHPRIV\"\t\"TOTAALIV\"\t\"VALUTA\"\t\"KODEFC\"\t\"KLANT\"\t\"EENHPRINCL\"\t\"EENHPRINCLIV\"\t\"KOSTPRIJS\"\t\"KOSTPRIJSIV\"\t\"AKWAARDE\"\t\"KODESAMENST\"\t\"DATUM\"\t\"STFAKT\"\t\"GEHELEN\"\t\"ONDERDELEN\"\t\"DAGBOEK\"\t\"BOEKJAAR\"\t\"FAKTNR\"\t\"FAKTDAT\"\t\"VERVDAT\"\t\"ORDERBK\"\t\"ORDERNR\"\t\"ORDERTPLN\"\t\"ORDERLIJN\"\t\"OFFERTEBK\"\t\"OFFERTENR\"\t\"OFFERTELIJN\"\t\"OFFERTETPLN\"\t\"ORDVOLLEDIG\"\t\"JOB\"\t\"COLLIS\"\t\"PALETTEN\"\t\"HISTDAT\"\t\"HISTORIEK\"\t\"COMPERC\"\t\"COMMISSIEIV\"\t\"TOTCOMIV\"\t\"GOEDCODE\"\t\"MASSAKG\"\t\"AANVEENH\"\t\"PRINTETIK\"\t\"ETIKGEPRINT\"\t\"SOORTPRIJS\"\t\"REFVORD\"\t\"REFNACALC\"\t\"GNBONKORTING\"\t\"ISHERST\"\t\"ANP1N1\"\t\"ANP1N2\"\t\"ANP2N1\"\t\"ANP2N2\"\t\"UITVOORRAAD\"\t\"UITVDAT\"\t\"HFDARTLIJNNR\"\t\"BKMVOLGNR\"\t\"BKMGEDRAG\"\t\"STDPRIJSINCL\"\t\"LANDORI\"\t\"OMSCHR\"",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Inventory360DEV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Inventory360AzureSqlDatabase5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_Inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

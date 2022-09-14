@@ -1,0 +1,24 @@
+{
+	"name": "OpenPO Production Trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "OpenPO Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-06-14T05:00:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

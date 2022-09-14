@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerTableRES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer2RES",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Results_Products"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

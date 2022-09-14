@@ -1,0 +1,16 @@
+{
+	"name": "OdbcTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Odbc2ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"VERTEGEN\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

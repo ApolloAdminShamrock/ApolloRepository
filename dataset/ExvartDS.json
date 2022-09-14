@@ -1,0 +1,285 @@
+{
+	"name": "ExvartDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExvartLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "EXVART",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "String"
+			},
+			{
+				"name": "GROSSWEIGHT",
+				"type": "String"
+			},
+			{
+				"name": "PCSPALET",
+				"type": "String"
+			},
+			{
+				"name": "SHELFLIFE",
+				"type": "String"
+			},
+			{
+				"name": "LBS",
+				"type": "String"
+			},
+			{
+				"name": "ACTIF",
+				"type": "String"
+			},
+			{
+				"name": "MSDSEUR",
+				"type": "String"
+			},
+			{
+				"name": "TDS",
+				"type": "String"
+			},
+			{
+				"name": "COUNTERTYPE1",
+				"type": "String"
+			},
+			{
+				"name": "COUNTERTYPE2",
+				"type": "String"
+			},
+			{
+				"name": "L",
+				"type": "String"
+			},
+			{
+				"name": "B",
+				"type": "String"
+			},
+			{
+				"name": "H",
+				"type": "String"
+			},
+			{
+				"name": "DIA",
+				"type": "String"
+			},
+			{
+				"name": "ORIGIN",
+				"type": "String"
+			},
+			{
+				"name": "ADR",
+				"type": "String"
+			},
+			{
+				"name": "ADR0",
+				"type": "String"
+			},
+			{
+				"name": "SYMBOL",
+				"type": "String"
+			},
+			{
+				"name": "RPHRASES",
+				"type": "String"
+			},
+			{
+				"name": "SPHRASES",
+				"type": "String"
+			},
+			{
+				"name": "CAS",
+				"type": "String"
+			},
+			{
+				"name": "CEEC",
+				"type": "String"
+			},
+			{
+				"name": "UNCODE",
+				"type": "String"
+			},
+			{
+				"name": "GROUP",
+				"type": "String"
+			},
+			{
+				"name": "CLASSIFICATI",
+				"type": "String"
+			},
+			{
+				"name": "USAPRICE",
+				"type": "String"
+			},
+			{
+				"name": "USAPRICEDATE",
+				"type": "String"
+			},
+			{
+				"name": "ABC",
+				"type": "String"
+			},
+			{
+				"name": "ACCESSID",
+				"type": "String"
+			},
+			{
+				"name": "PTFE",
+				"type": "String"
+			},
+			{
+				"name": "FREEZECONTRO",
+				"type": "String"
+			},
+			{
+				"name": "PICKINFO",
+				"type": "String"
+			},
+			{
+				"name": "PRODSITE",
+				"type": "String"
+			},
+			{
+				"name": "USAPRODGROUP",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATA",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATB",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATC",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATD",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATE",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATF",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATG",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATH",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATI",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATJ",
+				"type": "String"
+			},
+			{
+				"name": "PURCHKATK",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATL",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATM",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATO",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATX",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATY",
+				"type": "String"
+			},
+			{
+				"name": "PURCHCATR",
+				"type": "String"
+			},
+			{
+				"name": "USAPRODCODE",
+				"type": "String"
+			},
+			{
+				"name": "PREFEREDLIST",
+				"type": "String"
+			},
+			{
+				"name": "INF2_BAL_CAT",
+				"type": "String"
+			},
+			{
+				"name": "WHRCAT",
+				"type": "String"
+			},
+			{
+				"name": "WHSSTACK",
+				"type": "String"
+			},
+			{
+				"name": "WHSLOCMAX",
+				"type": "String"
+			},
+			{
+				"name": "WHSLOCATIE",
+				"type": "String"
+			},
+			{
+				"name": "QC",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT",
+				"type": "String"
+			},
+			{
+				"name": "PALLWGHT",
+				"type": "String"
+			},
+			{
+				"name": "SAMPLECODE",
+				"type": "String"
+			},
+			{
+				"name": "GYRO",
+				"type": "String"
+			},
+			{
+				"name": "DUTY",
+				"type": "String"
+			},
+			{
+				"name": "ADRTEXT",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

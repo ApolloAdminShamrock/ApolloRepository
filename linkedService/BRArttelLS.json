@@ -1,0 +1,16 @@
+{
+	"name": "BRArttelLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DW2014;initial catalog=Briljant;user id=ApolloAdmin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlMWQzMzgyOS04Njc3LTQ2NTktYjExOC02MTMyZDViMmM0N2YiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IRDW2014Production",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

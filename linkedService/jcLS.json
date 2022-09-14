@@ -1,0 +1,19 @@
+{
+	"name": "jcLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Odbc",
+		"typeProperties": {
+			"connectionString": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "JUNKIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

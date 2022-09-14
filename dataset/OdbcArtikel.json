@@ -1,0 +1,16 @@
+{
+	"name": "OdbcArtikel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OdbcArtikelLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"ARTIKEL\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

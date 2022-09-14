@@ -1,0 +1,83 @@
+{
+	"name": "SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GYROIRLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ItemKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Market",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RowID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUSTOM1",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM2",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM3",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM4",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM5",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM6",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM7",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM8",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM9",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM10",
+				"type": "bit"
+			},
+			{
+				"name": "ESG_REASON",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ESG_APPROVER",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Cust_TDSGyroDet"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

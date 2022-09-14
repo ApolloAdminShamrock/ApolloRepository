@@ -1,0 +1,311 @@
+{
+	"name": "exvartStagingDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExvartStagingLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GROSSWEIGHT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PCSPALET",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SHELFLIFE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LBS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ACTIF",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MSDSEUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TDS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTERTYPE1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTERTYPE2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "L",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "B",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "H",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DIA",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ORIGIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADR0",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SYMBOL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RPHRASES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SPHRASES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CAS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CEEC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UNCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CLASSIFICATI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "USAPRICE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "USAPRICEDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ABC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACCESSID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PTFE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FREEZECONTRO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PICKINFO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODSITE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "USAPRODGROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCHCATA",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATB",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATC",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATF",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATH",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATI",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATJ",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHKATK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATM",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATX",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATY",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PURCHCATR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "USAPRODCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PREFEREDLIST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INF2_BAL_CAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHRCAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSSTACK",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WHSLOCMAX",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WHSLOCATIE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "QC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PALLWGHT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SAMPLECODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GYRO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DUTY",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ADRTEXT",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EXVART"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

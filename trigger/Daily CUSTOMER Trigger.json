@@ -1,0 +1,24 @@
+{
+	"name": "Daily CUSTOMER Trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Apollo Accounts_DIM Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-03-08T05:15:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

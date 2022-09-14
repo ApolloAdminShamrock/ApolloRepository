@@ -1,0 +1,117 @@
+{
+	"name": "ExvaflDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ExvaflLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "EXVAFL",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "AFLEVERBK",
+				"type": "String"
+			},
+			{
+				"name": "AFLEVERNR",
+				"type": "String"
+			},
+			{
+				"name": "INCOTERM",
+				"type": "String"
+			},
+			{
+				"name": "ZENDING",
+				"type": "String"
+			},
+			{
+				"name": "REV",
+				"type": "String"
+			},
+			{
+				"name": "TRANSPORT",
+				"type": "String"
+			},
+			{
+				"name": "AFHDATUM",
+				"type": "String"
+			},
+			{
+				"name": "PICKUPDATE",
+				"type": "String"
+			},
+			{
+				"name": "SHIPPED",
+				"type": "String"
+			},
+			{
+				"name": "GW",
+				"type": "String"
+			},
+			{
+				"name": "DELIVERYDATE",
+				"type": "String"
+			},
+			{
+				"name": "TRANSPORTINV",
+				"type": "String"
+			},
+			{
+				"name": "PAIDFREIGHT",
+				"type": "String"
+			},
+			{
+				"name": "BAF",
+				"type": "String"
+			},
+			{
+				"name": "MAUT",
+				"type": "String"
+			},
+			{
+				"name": "CLOSED",
+				"type": "String"
+			},
+			{
+				"name": "DIFFERENCE",
+				"type": "String"
+			},
+			{
+				"name": "X_VERP",
+				"type": "String"
+			},
+			{
+				"name": "X_STAPELBAAR",
+				"type": "String"
+			},
+			{
+				"name": "X_CN",
+				"type": "String"
+			},
+			{
+				"name": "OPMERKING",
+				"type": "String"
+			},
+			{
+				"name": "OPMTRP",
+				"type": "String"
+			},
+			{
+				"name": "COMMENT",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

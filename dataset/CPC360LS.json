@@ -1,0 +1,17 @@
+{
+	"name": "CPC360LS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CPC360LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_CPC"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

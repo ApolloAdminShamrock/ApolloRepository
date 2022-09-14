@@ -1,0 +1,37 @@
+{
+	"name": "PR001 DF",
+	"properties": {
+		"activities": [
+			{
+				"name": "PRD_001 Data Flow",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "1.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "PR001",
+						"type": "DataFlowReference",
+						"parameters": {
+							"parameter1": "'st_ProductionStatus'"
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-09-07T13:24:19Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

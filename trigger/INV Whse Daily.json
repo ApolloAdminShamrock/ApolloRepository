@@ -1,0 +1,24 @@
+{
+	"name": "INV Whse Daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Apollo Inventory_DIM Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-03-22T05:00:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

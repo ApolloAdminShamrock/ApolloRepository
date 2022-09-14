@@ -1,0 +1,6 @@
+{
+	"name": "odbc-newark-Runtime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

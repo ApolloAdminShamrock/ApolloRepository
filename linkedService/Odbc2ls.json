@@ -1,0 +1,19 @@
+{
+	"name": "Odbc2ls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Odbc",
+		"typeProperties": {
+			"connectionString": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "Apollo-EU",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

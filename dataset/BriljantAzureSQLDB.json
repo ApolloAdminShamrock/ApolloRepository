@@ -1,0 +1,300 @@
+{
+	"name": "BriljantAzureSQLDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BriljantAzureSQLDBLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EANKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTNAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERKREK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BTWKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERPAKKING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HFDGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SUBGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAGLOK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MINVOORR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MAXVOORR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LEVSERIENR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KLASERIENR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISSAMENST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STOCKBEH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NETTO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "M3",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GOEDCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ASSORTIM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRETIK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAYOUTETIK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KOSTPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KPISPRSAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LEEGGDART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANKREK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EENHEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANKOOPPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GNKORTING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IVK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "FACTORAE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LEVNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EENHPERSAM",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREADATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREAUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREAUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZDATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "WIJZUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WEB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WEBAFBEELD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NTOPKLAKAART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECHTOMZET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GNBONKORTING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTNRFAB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LANDORI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VOORRRES",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VOORRAAD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INBACKLEV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INBACKKLA",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CONSIGN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MAGCTRL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "RAAMCONTR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INPROD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OPAFLEVER",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GEMAKWAARDE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VERZLEV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VOORZPROD",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OnHandKG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OnHandLbs",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "SnapShotDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "DataUpdateDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Source",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "BRILJANT_ARTICLE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

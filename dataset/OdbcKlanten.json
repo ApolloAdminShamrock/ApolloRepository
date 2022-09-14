@@ -1,0 +1,16 @@
+{
+	"name": "OdbcKlanten",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OdbcKlantenLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"KLANTEN\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

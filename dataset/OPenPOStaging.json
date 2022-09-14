@@ -1,0 +1,17 @@
+{
+	"name": "OPenPOStaging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OenPOStaging",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_OPEN_PO"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

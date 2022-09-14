@@ -1,0 +1,23 @@
+{
+	"name": "Apollo Master Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Apollo Master Product Pipeline",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Apollo Product_DIM Pipeline",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-06-29T20:23:14Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

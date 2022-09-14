@@ -1,0 +1,178 @@
+{
+	"name": "Product360",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ItemKey",
+				"type": "varchar"
+			},
+			{
+				"name": "Desc1",
+				"type": "varchar"
+			},
+			{
+				"name": "PrintableDesc",
+				"type": "varchar"
+			},
+			{
+				"name": "ProdLine",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductLineMfg",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductLineCategory",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductFamily",
+				"type": "varchar"
+			},
+			{
+				"name": "pct_PTFEContent",
+				"type": "varchar"
+			},
+			{
+				"name": "PrimaryMfgLocation",
+				"type": "varchar"
+			},
+			{
+				"name": "PackageType",
+				"type": "varchar"
+			},
+			{
+				"name": "PackageLiner",
+				"type": "varchar"
+			},
+			{
+				"name": "PackageWeight",
+				"type": "varchar"
+			},
+			{
+				"name": "PackageTare",
+				"type": "varchar"
+			},
+			{
+				"name": "LeadTime",
+				"type": "varchar"
+			},
+			{
+				"name": "st_ProductionStatus",
+				"type": "varchar"
+			},
+			{
+				"name": "st_ObsoletionStatus",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductDescPublic",
+				"type": "varchar"
+			},
+			{
+				"name": "ProductDescInternal",
+				"type": "varchar"
+			},
+			{
+				"name": "ApplBenefit",
+				"type": "varchar"
+			},
+			{
+				"name": "LevelOfAddition",
+				"type": "varchar"
+			},
+			{
+				"name": "ExperimentalProductName",
+				"type": "varchar"
+			},
+			{
+				"name": "BaseProduct",
+				"type": "varchar"
+			},
+			{
+				"name": "InksAndCoatings",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_US_Thermoplastics",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_US_Lubricants",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_US_PersonalCare",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_US_Other",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_APAC_InksAndCoatings",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_APAC_Thermoplastics",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_APAC_Lubricants",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_APAC_PersonalCare",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_APAC_Other",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_EMEA_InksAndCoatings",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_EMEA_Thermoplastics",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_EMEA_Lubricants",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_EMEA_PersonalCare",
+				"type": "varchar"
+			},
+			{
+				"name": "gyro_EMEA_Other",
+				"type": "varchar"
+			},
+			{
+				"name": "dt_Effective",
+				"type": "date"
+			},
+			{
+				"name": "dt_Expiry",
+				"type": "date"
+			},
+			{
+				"name": "v_Version",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_Product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

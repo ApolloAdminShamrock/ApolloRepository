@@ -1,0 +1,16 @@
+{
+	"name": "IRCPCNew",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DW2014;initial catalog=GMSM;user id=ApolloTest",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMmM0MzIwYi03NjM3LTQ3MjItOWEzZS01MjEwMDY3MDE4Y2MiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IRDW2014Production",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

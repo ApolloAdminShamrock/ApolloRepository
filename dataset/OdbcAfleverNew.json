@@ -1,0 +1,16 @@
+{
+	"name": "OdbcAfleverNew",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OdbcAfleverNewLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"AFLEVER\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

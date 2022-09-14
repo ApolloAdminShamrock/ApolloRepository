@@ -1,0 +1,750 @@
+{
+	"name": "IRINmastNEW",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IRINmastNEW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Itemkey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Desc1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Desc2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Reserved1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PurchconvFctr",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PurchToStkCnvFctr",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "SaleToStkCnvFctr",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "UseGenCnvFctr",
+				"type": "bit"
+			},
+			{
+				"name": "Weight",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Physcyclecnt",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Seriallotflg",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NumberMask",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DefltSize",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DaysToExpire",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Itemtyp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ItemSubtyp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Itemcostmthd",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Oversoldcostmthd",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PriceGrp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Abckey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Manufacturer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Altitemkey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Prodkey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Commodkey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Eccncode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Itemlength",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Itemwidth",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Itemheight",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Inctrlcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Plannercode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Spare1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Orderpolicycode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Orderpoint",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Mrptrigger",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Minorderqty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Maxorderqty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Rndfctr",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Safetystockcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Safetystockqty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Stockuomcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Purchaseuomcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Salesuomcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Itemlinearuom",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Yieldfctr",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Spare2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Forecasttmfence",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Planningtmfence",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Pegindicator",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Backflush",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Levelcode",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Leadtime",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "OrderMethod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Reservedmfg",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recuserid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Recdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Operatcrncyky",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Altstockuom",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAStubUnPrc",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "NAStunUnCst",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Taxrefid",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Spare3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Insp_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MSDSTemp_Key",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SpecGravity",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Inter_Typ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MeasuredBy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LotSizingMthd",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BoilingPoint",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CASnbr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ChemicalName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DelayedHealthHazard",
+				"type": "char"
+			},
+			{
+				"name": "FireHazard",
+				"type": "char"
+			},
+			{
+				"name": "FlashPoint",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FlashPointMethod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gas",
+				"type": "char"
+			},
+			{
+				"name": "HMISChronic",
+				"type": "char"
+			},
+			{
+				"name": "HMISFlammability",
+				"type": "char"
+			},
+			{
+				"name": "HMISHealth",
+				"type": "char"
+			},
+			{
+				"name": "HMISPersProt",
+				"type": "char"
+			},
+			{
+				"name": "HMISReactivity",
+				"type": "char"
+			},
+			{
+				"name": "ImmedHealthHaz",
+				"type": "char"
+			},
+			{
+				"name": "Liquid",
+				"type": "char"
+			},
+			{
+				"name": "LowerExplosiveLimit",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MatClassifications",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Mixture",
+				"type": "char"
+			},
+			{
+				"name": "Pure",
+				"type": "char"
+			},
+			{
+				"name": "ReactivityHazard",
+				"type": "char"
+			},
+			{
+				"name": "Solid",
+				"type": "char"
+			},
+			{
+				"name": "SuddenRlsOfPress",
+				"type": "char"
+			},
+			{
+				"name": "TradeSecret",
+				"type": "char"
+			},
+			{
+				"name": "UpperExplosiveLimit",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VPmmHg",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VPTemp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OtherInfo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Salsp_Com_Ky",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SalesQC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MfgQC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AdditionalComm",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CommEffectDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CommExpDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PSrLotAutoGen",
+				"type": "char"
+			},
+			{
+				"name": "PCustomPosition",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "POptional",
+				"type": "char"
+			},
+			{
+				"name": "PCustom",
+				"type": "char"
+			},
+			{
+				"name": "PDateFormat",
+				"type": "char"
+			},
+			{
+				"name": "PSeqNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MSrLotAutoGen",
+				"type": "char"
+			},
+			{
+				"name": "MCustomPosition",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "MOptional",
+				"type": "char"
+			},
+			{
+				"name": "MCustom",
+				"type": "char"
+			},
+			{
+				"name": "MDateFormat",
+				"type": "char"
+			},
+			{
+				"name": "MSeqNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MultipleBinsReq",
+				"type": "nchar"
+			},
+			{
+				"name": "LotIssueMethod",
+				"type": "nchar"
+			},
+			{
+				"name": "PUseSeqNo",
+				"type": "bit"
+			},
+			{
+				"name": "MUseSeqNo",
+				"type": "bit"
+			},
+			{
+				"name": "DaysToQuarantine",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "INCI",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EINICS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Produomcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ShipShLife",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProdShLife",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FGExpShLife",
+				"type": "bit"
+			},
+			{
+				"name": "UPCCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StrgCndtnKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PrintableDesc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PurShelfLife",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CreateDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CreateUserID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ModifyDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ModifyUserID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AllowSerialization",
+				"type": "nchar"
+			},
+			{
+				"name": "AllowPartIssueSerialization",
+				"type": "nchar"
+			},
+			{
+				"name": "Purchasable",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Saleable",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DefaultContainerQty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PurQCType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SpecificationTemplate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NFPA1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NFPA2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NFPA3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NFPA4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DfltCntBOM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AllowPalletization",
+				"type": "nchar"
+			},
+			{
+				"name": "User1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "User2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "User3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "User4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "User5",
+				"type": "nvarchar"
+			},
+			{
+				"name": "User6",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "User7",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "User8",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "User9",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "User10",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "User11",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "User12",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ESG_REASON",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ESG_APPROVER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTOM1",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CUSTOM2",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM3",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTOM5",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTOM6",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM7",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM8",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM9",
+				"type": "bit"
+			},
+			{
+				"name": "CUSTOM10",
+				"type": "bit"
+			},
+			{
+				"name": "ClassificationID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INMAST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

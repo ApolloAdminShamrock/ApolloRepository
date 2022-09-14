@@ -1,0 +1,13 @@
+{
+	"name": "CustAcctsIR",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Inmast STaging Table LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

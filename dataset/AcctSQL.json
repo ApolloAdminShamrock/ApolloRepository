@@ -1,0 +1,220 @@
+{
+	"name": "AcctSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "IRAcctNew",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "RECID",
+				"type": "varchar"
+			},
+			{
+				"name": "CustomerID",
+				"type": "varchar"
+			},
+			{
+				"name": "GMAccountno",
+				"type": "varchar"
+			},
+			{
+				"name": "GMRecid",
+				"type": "varchar"
+			},
+			{
+				"name": "CustomerNo",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipToNo",
+				"type": "varchar"
+			},
+			{
+				"name": "NationalOrgID",
+				"type": "varchar"
+			},
+			{
+				"name": "RegionalOrgID",
+				"type": "varchar"
+			},
+			{
+				"name": "GlobalOrgID",
+				"type": "varchar"
+			},
+			{
+				"name": "Source",
+				"type": "varchar"
+			},
+			{
+				"name": "CustomerName",
+				"type": "varchar"
+			},
+			{
+				"name": "Address1",
+				"type": "varchar"
+			},
+			{
+				"name": "Address2",
+				"type": "varchar"
+			},
+			{
+				"name": "Address3",
+				"type": "varchar"
+			},
+			{
+				"name": "Address4",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "ZIP",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Contact",
+				"type": "varchar"
+			},
+			{
+				"name": "Phone",
+				"type": "varchar"
+			},
+			{
+				"name": "Fax",
+				"type": "varchar"
+			},
+			{
+				"name": "Salesman",
+				"type": "varchar"
+			},
+			{
+				"name": "Salesman No",
+				"type": "varchar"
+			},
+			{
+				"name": "Sales Channel",
+				"type": "varchar"
+			},
+			{
+				"name": "Bus Unit",
+				"type": "varchar"
+			},
+			{
+				"name": "Industry",
+				"type": "varchar"
+			},
+			{
+				"name": "Industry Mgr",
+				"type": "varchar"
+			},
+			{
+				"name": "Mkt Mgr",
+				"type": "varchar"
+			},
+			{
+				"name": "Application",
+				"type": "varchar"
+			},
+			{
+				"name": "CMPNY",
+				"type": "varchar"
+			},
+			{
+				"name": "Obsoleted",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipToType",
+				"type": "varchar"
+			},
+			{
+				"name": "LocationName",
+				"type": "varchar"
+			},
+			{
+				"name": "Location Type",
+				"type": "varchar"
+			},
+			{
+				"name": "NationalName",
+				"type": "varchar"
+			},
+			{
+				"name": "RegionalName",
+				"type": "varchar"
+			},
+			{
+				"name": "GlobalName",
+				"type": "varchar"
+			},
+			{
+				"name": "EffectiveSalesman",
+				"type": "varchar"
+			},
+			{
+				"name": "EffectiveCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "Tier",
+				"type": "varchar"
+			},
+			{
+				"name": "Contact Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Longitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Latitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GMOwnership",
+				"type": "varchar"
+			},
+			{
+				"name": "RecordCurtainingLevel",
+				"type": "varchar"
+			},
+			{
+				"name": "RowStatus",
+				"type": "varchar"
+			},
+			{
+				"name": "RowChangeReason",
+				"type": "varchar"
+			},
+			{
+				"name": "InitialLoadSystem",
+				"type": "varchar"
+			},
+			{
+				"name": "LastChangeSystem",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Apollo",
+			"table": "vw_Accounts"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

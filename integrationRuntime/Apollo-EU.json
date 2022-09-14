@@ -1,0 +1,7 @@
+{
+	"name": "Apollo-EU",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Apollo Pervasive DB Connection EU"
+	}
+}

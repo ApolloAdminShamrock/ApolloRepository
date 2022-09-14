@@ -1,0 +1,215 @@
+{
+	"name": "SCDProductDF",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DEVStaging",
+						"type": "DatasetReference"
+					},
+					"name": "SRCStaging"
+				},
+				{
+					"dataset": {
+						"referenceName": "M20Cloud360",
+						"type": "DatasetReference"
+					},
+					"name": "Src360"
+				},
+				{
+					"dataset": {
+						"referenceName": "PR001Cloud360",
+						"type": "DatasetReference"
+					},
+					"name": "MaxKey"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "M20Cloud360",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "AddHashInput"
+				},
+				{
+					"name": "FilterForActive"
+				},
+				{
+					"name": "ExistingHash"
+				},
+				{
+					"name": "select1"
+				},
+				{
+					"name": "select2"
+				},
+				{
+					"name": "CrossJin"
+				},
+				{
+					"name": "join1"
+				},
+				{
+					"name": "split1"
+				}
+			],
+			"scriptLines": [
+				"parameters{",
+				"     PrimaryKey as string ('Itemkey'),",
+				"     Columns as string ('ProdLineAcctg,ProductLineFunctional,PrimaryMfgLocation,LeadTime')",
+				"}",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> SRCStaging",
+				"source(output(",
+				"          ItemKey as string,",
+				"          Desc1 as string,",
+				"          PrintableDesc as string,",
+				"          ProdLineAcctg as string,",
+				"          ProductLineFunctional as string,",
+				"          ProductLineCategory as string,",
+				"          ProductFamily as string,",
+				"          pct_PTFEContent as string,",
+				"          PrimaryMfgLocation as string,",
+				"          PackageType as string,",
+				"          PackageLiner as string,",
+				"          PackageWeight as string,",
+				"          PackageTare as string,",
+				"          LeadTime as string,",
+				"          st_ProductionStatus as string,",
+				"          st_ObsoletionStatus as string,",
+				"          ProductDescPublic as string,",
+				"          ProductDescInternal as string,",
+				"          ApplBenefit as string,",
+				"          LevelOfAddition as string,",
+				"          ExperimentalProductName as string,",
+				"          BaseProduct as string,",
+				"          gyro_US_InksAndCoatings as string,",
+				"          gyro_US_Thermoplastics as string,",
+				"          gyro_US_Lubricants as string,",
+				"          gyro_US_PersonalCare as string,",
+				"          gyro_US_Other as string,",
+				"          gyro_APAC_InksAndCoatings as string,",
+				"          gyro_APAC_Thermoplastics as string,",
+				"          gyro_APAC_Lubricants as string,",
+				"          gyro_APAC_PersonalCare as string,",
+				"          gyro_APAC_Other as string,",
+				"          gyro_EMEA_InksAndCoatings as string,",
+				"          gyro_EMEA_Thermoplastics as string,",
+				"          gyro_EMEA_Lubricants as string,",
+				"          gyro_EMEA_PersonalCare as string,",
+				"          gyro_EMEA_Other as string,",
+				"          RecordEffectiveStartDate as timestamp,",
+				"          RecordEffectiveEndDate as timestamp,",
+				"          RecordStatus as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> Src360",
+				"source(output(",
+				"          MaxKey as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     query: 'select MAX(PRD_SID) as MaxKey\\nFROM dbo.tbl_DIM_Product',",
+				"     format: 'query') ~> MaxKey",
+				"SRCStaging derive(ItemKey = md5($PrimaryKey),",
+				"          columns_hash = md5(byNames(split($Columns,',')))) ~> AddHashInput",
+				"Src360 filter(toInteger(byName('RecordStatus')) == 1) ~> FilterForActive",
+				"FilterForActive derive(ItemKey = md5($PrimaryKey),",
+				"          columns_hash = md5(byNames(split($Columns,',')))) ~> ExistingHash",
+				"AddHashInput select(mapColumn(",
+				"          src_ItemKey = ItemKey,",
+				"          src_columns_hash = columns_hash",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"ExistingHash select(mapColumn(",
+				"          Cloud360_ItemKey = ItemKey,",
+				"          Cloud360_columns_hash = columns_hash",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select2",
+				"SRCStaging, MaxKey join(1==1,",
+				"     joinType:'cross',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> CrossJin",
+				"select1, select2 join(src_ItemKey == Cloud360_ItemKey,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1",
+				"join1 split(src_ItemKey==Cloud360_ItemKey,",
+				"     disjoint: false) ~> split1@(Match, UnMatched)",
+				"split1@UnMatched sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          ItemKey as string,",
+				"          Desc1 as string,",
+				"          PrintableDesc as string,",
+				"          ProdLineAcctg as string,",
+				"          ProductLineFunctional as string,",
+				"          ProductLineCategory as string,",
+				"          ProductFamily as string,",
+				"          pct_PTFEContent as string,",
+				"          PrimaryMfgLocation as string,",
+				"          PackageType as string,",
+				"          PackageLiner as string,",
+				"          PackageWeight as string,",
+				"          PackageTare as string,",
+				"          LeadTime as string,",
+				"          st_ProductionStatus as string,",
+				"          st_ObsoletionStatus as string,",
+				"          ProductDescPublic as string,",
+				"          ProductDescInternal as string,",
+				"          ApplBenefit as string,",
+				"          LevelOfAddition as string,",
+				"          ExperimentalProductName as string,",
+				"          BaseProduct as string,",
+				"          gyro_US_InksAndCoatings as string,",
+				"          gyro_US_Thermoplastics as string,",
+				"          gyro_US_Lubricants as string,",
+				"          gyro_US_PersonalCare as string,",
+				"          gyro_US_Other as string,",
+				"          gyro_APAC_InksAndCoatings as string,",
+				"          gyro_APAC_Thermoplastics as string,",
+				"          gyro_APAC_Lubricants as string,",
+				"          gyro_APAC_PersonalCare as string,",
+				"          gyro_APAC_Other as string,",
+				"          gyro_EMEA_InksAndCoatings as string,",
+				"          gyro_EMEA_Thermoplastics as string,",
+				"          gyro_EMEA_Lubricants as string,",
+				"          gyro_EMEA_PersonalCare as string,",
+				"          gyro_EMEA_Other as string,",
+				"          RecordEffectiveStartDate as timestamp,",
+				"          RecordEffectiveEndDate as timestamp,",
+				"          RecordStatus as integer",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          Cloud360_ItemKey = src_ItemKey,",
+				"          Cloud360_columns_hash = src_columns_hash",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

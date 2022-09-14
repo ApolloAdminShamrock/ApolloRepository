@@ -1,0 +1,17 @@
+{
+	"name": "Prod360production",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Prod360Production",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_Product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,98 @@
+{
+	"name": "TDSHdrStaging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TDSHdrStaging",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ItemKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProdDesc",
+				"type": "text"
+			},
+			{
+				"name": "IntProdDesc",
+				"type": "text"
+			},
+			{
+				"name": "ApplicationBen",
+				"type": "text"
+			},
+			{
+				"name": "LevelofAddition",
+				"type": "text"
+			},
+			{
+				"name": "InciName",
+				"type": "text"
+			},
+			{
+				"name": "RegulaStatus",
+				"type": "text"
+			},
+			{
+				"name": "FDAComp",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM1",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM2",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM3",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM4",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM5",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM6",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM7",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM8",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM9",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM10",
+				"type": "text"
+			},
+			{
+				"name": "ESG_REASON",
+				"type": "text"
+			},
+			{
+				"name": "ESG_APPROVER",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Cust_TDSHeader"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

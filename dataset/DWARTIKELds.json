@@ -1,0 +1,222 @@
+{
+	"name": "DWARTIKELds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DWARTIKELls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EANKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTNAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERKREK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BTWKODE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VERPAKKING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HFDGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SUBGRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAGLOK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MINVOORR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MAXVOORR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LEVSERIENR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KLASERIENR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISSAMENST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STOCKBEH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NETTO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "M3",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GOEDCODE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ASSORTIM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRETIK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAYOUTETIK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KOSTPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KPISPRSAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LEEGGDART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANKREK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "EENHEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AANKOOPPRIJS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GNKORTING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IVK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "FACTORAE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "LEVNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EENHPERSAM",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREADATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREAUUR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CREAUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZDATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "WIJZUUR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "WIJZUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WEB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WEBAFBEELD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NTOPKLAKAART",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECHTOMZET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GNBONKORTING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ARTNRFAB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LANDORI",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ARTIKEL"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

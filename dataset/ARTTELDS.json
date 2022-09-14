@@ -1,0 +1,77 @@
+{
+	"name": "ARTTELDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ARTTELLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "ARTTEL",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ARTNR",
+				"type": "String"
+			},
+			{
+				"name": "VOORRRES",
+				"type": "String"
+			},
+			{
+				"name": "VOORRAAD",
+				"type": "String"
+			},
+			{
+				"name": "INBACKLEV",
+				"type": "String"
+			},
+			{
+				"name": "INBACKKLA",
+				"type": "String"
+			},
+			{
+				"name": "CONSIGN",
+				"type": "String"
+			},
+			{
+				"name": "MAGCTRL",
+				"type": "String"
+			},
+			{
+				"name": "RAAMCONTR",
+				"type": "String"
+			},
+			{
+				"name": "INPROD",
+				"type": "String"
+			},
+			{
+				"name": "OPAFLEVER",
+				"type": "String"
+			},
+			{
+				"name": "GEMAKWAARDE",
+				"type": "String"
+			},
+			{
+				"name": "VERZLEV",
+				"type": "String"
+			},
+			{
+				"name": "VOORZPROD",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

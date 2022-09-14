@@ -1,0 +1,17 @@
+{
+	"name": "temp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "temp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PrintableDescription"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

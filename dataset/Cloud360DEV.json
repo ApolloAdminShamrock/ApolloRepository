@@ -1,0 +1,17 @@
+{
+	"name": "Cloud360DEV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Cloud360DEV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_Product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

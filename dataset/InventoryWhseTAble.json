@@ -1,0 +1,62 @@
+{
+	"name": "InventoryWhseTAble",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InventoryLSAzureSqlDatabase5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PRODUCT_CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT_LINE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRODUCT_GRADE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSE_CODE",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "WHSE_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSE_ON_HAND",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SnapShotDate",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "DataUpdateDate",
+				"type": "datetime2",
+				"scale": 7
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_Inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

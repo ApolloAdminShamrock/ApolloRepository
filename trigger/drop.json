@@ -1,0 +1,18 @@
+{
+	"name": "drop",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/apollocontainer/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/c3330cb5-333e-40f7-a58b-1f1c76dd680d/resourceGroups/ApolloStorageGroup/providers/Microsoft.Storage/storageAccounts/apollostorageshamrock",
+			"events": [
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

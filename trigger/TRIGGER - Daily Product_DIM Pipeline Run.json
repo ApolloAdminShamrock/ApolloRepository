@@ -1,0 +1,25 @@
+{
+	"name": "TRIGGER - Daily Product_DIM Pipeline Run",
+	"properties": {
+		"description": "Daily Product_DIM Production Run",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Apollo Product_DIM Pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2022-03-24T05:05:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+{
+	"name": "CPCStagingLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CPCStagingLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "RecordID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CPCID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CMPNY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTNO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SHIPTONO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProductCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Customer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PrimaryWarehouse",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "HarmonizedCustomer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HarmonizedProduct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sales Channel",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OppID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StartDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FirstOrderDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MostRecentOrderDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Annual Potential (lbs)",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Annual Potential ($$$)",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ShareAtCustomer",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AddressableAtCustomer",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "OrderSize",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Regularity of order pattern",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Application",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_CPC"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

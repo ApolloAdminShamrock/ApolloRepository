@@ -1,0 +1,118 @@
+{
+	"name": "EXvaflDWTableDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EXvaflDWTableLS2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "AFLEVERBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AFLEVERNR",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "INCOTERM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZENDING",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "REV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TRANSPORT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AFHDATUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PICKUPDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SHIPPED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GW",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "DELIVERYDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSPORTINV",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAIDFREIGHT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BAF",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "MAUT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CLOSED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DIFFERENCE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "X_VERP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "X_STAPELBAAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "X_CN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OPMERKING",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OPMTRP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMMENT",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EXVAFL"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

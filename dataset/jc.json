@@ -1,0 +1,16 @@
+{
+	"name": "jc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "jcLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"VERTEGEN\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

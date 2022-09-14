@@ -1,0 +1,23 @@
+{
+	"name": "BlobDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"path": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"folderPath": {
+				"value": "@{dataset().path}",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

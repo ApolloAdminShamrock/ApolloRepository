@@ -1,0 +1,209 @@
+{
+	"name": "ArtikelDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ArtikelLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "ARTIKEL",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "HDP69B-1000",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			},
+			{
+				"name": "HYDROCER DP 69 1000 Kg",
+				"type": "String"
+			},
+			{
+				"name": "700000321",
+				"type": "String"
+			},
+			{
+				"name": "4",
+				"type": "String"
+			},
+			{
+				"name": "IBC5",
+				"type": "String"
+			},
+			{
+				"name": "WDIS",
+				"type": "String"
+			},
+			{
+				"name": "BAS",
+				"type": "String"
+			},
+			{
+				"name": "I",
+				"type": "String"
+			},
+			{
+				"name": "1.0",
+				"type": "String"
+			},
+			{
+				"name": "2.0",
+				"type": "String"
+			},
+			{
+				"name": "X11",
+				"type": "String"
+			},
+			{
+				"name": "X12",
+				"type": "String"
+			},
+			{
+				"name": "Prop_13",
+				"type": "String"
+			},
+			{
+				"name": "X14",
+				"type": "String"
+			},
+			{
+				"name": "1000.0",
+				"type": "String"
+			},
+			{
+				"name": "0.016",
+				"type": "String"
+			},
+			{
+				"name": "34024200",
+				"type": "String"
+			},
+			{
+				"name": "X18",
+				"type": "String"
+			},
+			{
+				"name": "Prop_19",
+				"type": "String"
+			},
+			{
+				"name": "Prop_20",
+				"type": "String"
+			},
+			{
+				"name": "0.021",
+				"type": "String"
+			},
+			{
+				"name": "A",
+				"type": "String"
+			},
+			{
+				"name": "Prop_23",
+				"type": "String"
+			},
+			{
+				"name": "600000321",
+				"type": "String"
+			},
+			{
+				"name": "IBC25",
+				"type": "String"
+			},
+			{
+				"name": "0.026",
+				"type": "String"
+			},
+			{
+				"name": "Prop_27",
+				"type": "String"
+			},
+			{
+				"name": "0.028",
+				"type": "String"
+			},
+			{
+				"name": "0.029",
+				"type": "String"
+			},
+			{
+				"name": "999999",
+				"type": "String"
+			},
+			{
+				"name": "0.031",
+				"type": "String"
+			},
+			{
+				"name": "Prop_32",
+				"type": "String"
+			},
+			{
+				"name": "2019-09-27",
+				"type": "String"
+			},
+			{
+				"name": "1317",
+				"type": "String"
+			},
+			{
+				"name": "CP35",
+				"type": "String"
+			},
+			{
+				"name": "2022-03-23",
+				"type": "String"
+			},
+			{
+				"name": "1510",
+				"type": "String"
+			},
+			{
+				"name": "CP38",
+				"type": "String"
+			},
+			{
+				"name": "Prop_39",
+				"type": "String"
+			},
+			{
+				"name": "Prop_40",
+				"type": "String"
+			},
+			{
+				"name": "Prop_41",
+				"type": "String"
+			},
+			{
+				"name": "0.042",
+				"type": "String"
+			},
+			{
+				"name": "Prop_43",
+				"type": "String"
+			},
+			{
+				"name": "P031",
+				"type": "String"
+			},
+			{
+				"name": "US",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

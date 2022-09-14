@@ -1,0 +1,694 @@
+{
+	"name": "InmastSTagingTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Inmast STaging Table LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Itemkey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Desc1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Desc2",
+				"type": "text"
+			},
+			{
+				"name": "Reserved1",
+				"type": "text"
+			},
+			{
+				"name": "PurchconvFctr",
+				"type": "text"
+			},
+			{
+				"name": "PurchToStkCnvFctr",
+				"type": "text"
+			},
+			{
+				"name": "SaleToStkCnvFctr",
+				"type": "text"
+			},
+			{
+				"name": "UseGenCnvFctr",
+				"type": "text"
+			},
+			{
+				"name": "Weight",
+				"type": "text"
+			},
+			{
+				"name": "Physcyclecnt",
+				"type": "text"
+			},
+			{
+				"name": "Seriallotflg",
+				"type": "text"
+			},
+			{
+				"name": "NumberMask",
+				"type": "text"
+			},
+			{
+				"name": "DefltSize",
+				"type": "text"
+			},
+			{
+				"name": "DaysToExpire",
+				"type": "text"
+			},
+			{
+				"name": "Itemtyp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ItemSubtyp",
+				"type": "text"
+			},
+			{
+				"name": "Itemcostmthd",
+				"type": "text"
+			},
+			{
+				"name": "Oversoldcostmthd",
+				"type": "text"
+			},
+			{
+				"name": "PriceGrp",
+				"type": "text"
+			},
+			{
+				"name": "Abckey",
+				"type": "text"
+			},
+			{
+				"name": "Manufacturer",
+				"type": "text"
+			},
+			{
+				"name": "Altitemkey",
+				"type": "text"
+			},
+			{
+				"name": "Prodkey",
+				"type": "text"
+			},
+			{
+				"name": "Commodkey",
+				"type": "text"
+			},
+			{
+				"name": "Eccncode",
+				"type": "text"
+			},
+			{
+				"name": "Itemlength",
+				"type": "text"
+			},
+			{
+				"name": "Itemwidth",
+				"type": "text"
+			},
+			{
+				"name": "Itemheight",
+				"type": "text"
+			},
+			{
+				"name": "Inctrlcode",
+				"type": "text"
+			},
+			{
+				"name": "Plannercode",
+				"type": "text"
+			},
+			{
+				"name": "Spare1",
+				"type": "text"
+			},
+			{
+				"name": "Orderpolicycode",
+				"type": "text"
+			},
+			{
+				"name": "Orderpoint",
+				"type": "text"
+			},
+			{
+				"name": "Mrptrigger",
+				"type": "text"
+			},
+			{
+				"name": "Minorderqty",
+				"type": "text"
+			},
+			{
+				"name": "Maxorderqty",
+				"type": "text"
+			},
+			{
+				"name": "Rndfctr",
+				"type": "text"
+			},
+			{
+				"name": "Safetystockcode",
+				"type": "text"
+			},
+			{
+				"name": "Safetystockqty",
+				"type": "text"
+			},
+			{
+				"name": "Stockuomcode",
+				"type": "text"
+			},
+			{
+				"name": "Purchaseuomcode",
+				"type": "text"
+			},
+			{
+				"name": "Salesuomcode",
+				"type": "text"
+			},
+			{
+				"name": "Itemlinearuom",
+				"type": "text"
+			},
+			{
+				"name": "Yieldfctr",
+				"type": "text"
+			},
+			{
+				"name": "Spare2",
+				"type": "text"
+			},
+			{
+				"name": "Forecasttmfence",
+				"type": "text"
+			},
+			{
+				"name": "Planningtmfence",
+				"type": "text"
+			},
+			{
+				"name": "Pegindicator",
+				"type": "text"
+			},
+			{
+				"name": "Backflush",
+				"type": "text"
+			},
+			{
+				"name": "Levelcode",
+				"type": "text"
+			},
+			{
+				"name": "Leadtime",
+				"type": "text"
+			},
+			{
+				"name": "OrderMethod",
+				"type": "text"
+			},
+			{
+				"name": "Reservedmfg",
+				"type": "text"
+			},
+			{
+				"name": "Recuserid",
+				"type": "text"
+			},
+			{
+				"name": "Recdate",
+				"type": "text"
+			},
+			{
+				"name": "Operatcrncyky",
+				"type": "text"
+			},
+			{
+				"name": "Altstockuom",
+				"type": "text"
+			},
+			{
+				"name": "NAStubUnPrc",
+				"type": "text"
+			},
+			{
+				"name": "NAStunUnCst",
+				"type": "text"
+			},
+			{
+				"name": "Taxrefid",
+				"type": "text"
+			},
+			{
+				"name": "Spare3",
+				"type": "text"
+			},
+			{
+				"name": "Insp_YN",
+				"type": "text"
+			},
+			{
+				"name": "MSDSTemp_Key",
+				"type": "text"
+			},
+			{
+				"name": "SpecGravity",
+				"type": "text"
+			},
+			{
+				"name": "Inter_Typ",
+				"type": "text"
+			},
+			{
+				"name": "MeasuredBy",
+				"type": "text"
+			},
+			{
+				"name": "LotSizingMthd",
+				"type": "text"
+			},
+			{
+				"name": "BoilingPoint",
+				"type": "text"
+			},
+			{
+				"name": "CASnbr",
+				"type": "text"
+			},
+			{
+				"name": "ChemicalName",
+				"type": "text"
+			},
+			{
+				"name": "DelayedHealthHazard",
+				"type": "text"
+			},
+			{
+				"name": "FireHazard",
+				"type": "text"
+			},
+			{
+				"name": "FlashPoint",
+				"type": "text"
+			},
+			{
+				"name": "FlashPointMethod",
+				"type": "text"
+			},
+			{
+				"name": "Gas",
+				"type": "text"
+			},
+			{
+				"name": "HMISChronic",
+				"type": "text"
+			},
+			{
+				"name": "HMISFlammability",
+				"type": "text"
+			},
+			{
+				"name": "HMISHealth",
+				"type": "text"
+			},
+			{
+				"name": "HMISPersProt",
+				"type": "text"
+			},
+			{
+				"name": "HMISReactivity",
+				"type": "text"
+			},
+			{
+				"name": "ImmedHealthHaz",
+				"type": "text"
+			},
+			{
+				"name": "Liquid",
+				"type": "text"
+			},
+			{
+				"name": "LowerExplosiveLimit",
+				"type": "text"
+			},
+			{
+				"name": "MatClassifications",
+				"type": "text"
+			},
+			{
+				"name": "Mixture",
+				"type": "text"
+			},
+			{
+				"name": "Pure",
+				"type": "text"
+			},
+			{
+				"name": "ReactivityHazard",
+				"type": "text"
+			},
+			{
+				"name": "Solid",
+				"type": "text"
+			},
+			{
+				"name": "SuddenRlsOfPress",
+				"type": "text"
+			},
+			{
+				"name": "TradeSecret",
+				"type": "text"
+			},
+			{
+				"name": "UpperExplosiveLimit",
+				"type": "text"
+			},
+			{
+				"name": "VPmmHg",
+				"type": "text"
+			},
+			{
+				"name": "VPTemp",
+				"type": "text"
+			},
+			{
+				"name": "OtherInfo",
+				"type": "text"
+			},
+			{
+				"name": "Salsp_Com_Ky",
+				"type": "text"
+			},
+			{
+				"name": "SalesQC",
+				"type": "text"
+			},
+			{
+				"name": "MfgQC",
+				"type": "text"
+			},
+			{
+				"name": "AdditionalComm",
+				"type": "text"
+			},
+			{
+				"name": "CommEffectDate",
+				"type": "text"
+			},
+			{
+				"name": "CommExpDate",
+				"type": "text"
+			},
+			{
+				"name": "PSrLotAutoGen",
+				"type": "text"
+			},
+			{
+				"name": "PCustomPosition",
+				"type": "text"
+			},
+			{
+				"name": "POptional",
+				"type": "text"
+			},
+			{
+				"name": "PCustom",
+				"type": "text"
+			},
+			{
+				"name": "PDateFormat",
+				"type": "text"
+			},
+			{
+				"name": "PSeqNo",
+				"type": "text"
+			},
+			{
+				"name": "MSrLotAutoGen",
+				"type": "text"
+			},
+			{
+				"name": "MCustomPosition",
+				"type": "text"
+			},
+			{
+				"name": "MOptional",
+				"type": "text"
+			},
+			{
+				"name": "MCustom",
+				"type": "text"
+			},
+			{
+				"name": "MDateFormat",
+				"type": "text"
+			},
+			{
+				"name": "MSeqNo",
+				"type": "text"
+			},
+			{
+				"name": "MultipleBinsReq",
+				"type": "text"
+			},
+			{
+				"name": "LotIssueMethod",
+				"type": "text"
+			},
+			{
+				"name": "PUseSeqNo",
+				"type": "text"
+			},
+			{
+				"name": "MUseSeqNo",
+				"type": "text"
+			},
+			{
+				"name": "DaysToQuarantine",
+				"type": "text"
+			},
+			{
+				"name": "INCI",
+				"type": "text"
+			},
+			{
+				"name": "EINICS",
+				"type": "text"
+			},
+			{
+				"name": "Produomcode",
+				"type": "text"
+			},
+			{
+				"name": "ShipShLife",
+				"type": "text"
+			},
+			{
+				"name": "ProdShLife",
+				"type": "text"
+			},
+			{
+				"name": "FGExpShLife",
+				"type": "text"
+			},
+			{
+				"name": "UPCCODE",
+				"type": "text"
+			},
+			{
+				"name": "StrgCndtnKey",
+				"type": "text"
+			},
+			{
+				"name": "PrintableDesc",
+				"type": "text"
+			},
+			{
+				"name": "PurShelfLife",
+				"type": "text"
+			},
+			{
+				"name": "CreateDate",
+				"type": "text"
+			},
+			{
+				"name": "CreateUserID",
+				"type": "text"
+			},
+			{
+				"name": "ModifyDate",
+				"type": "text"
+			},
+			{
+				"name": "ModifyUserID",
+				"type": "text"
+			},
+			{
+				"name": "AllowSerialization",
+				"type": "text"
+			},
+			{
+				"name": "AllowPartIssueSerialization",
+				"type": "text"
+			},
+			{
+				"name": "Purchasable",
+				"type": "text"
+			},
+			{
+				"name": "Saleable",
+				"type": "text"
+			},
+			{
+				"name": "DefaultContainerQty",
+				"type": "text"
+			},
+			{
+				"name": "PurQCType",
+				"type": "text"
+			},
+			{
+				"name": "SpecificationTemplate",
+				"type": "text"
+			},
+			{
+				"name": "NFPA1",
+				"type": "text"
+			},
+			{
+				"name": "NFPA2",
+				"type": "text"
+			},
+			{
+				"name": "NFPA3",
+				"type": "text"
+			},
+			{
+				"name": "NFPA4",
+				"type": "text"
+			},
+			{
+				"name": "DfltCntBOM",
+				"type": "text"
+			},
+			{
+				"name": "AllowPalletization",
+				"type": "text"
+			},
+			{
+				"name": "User1",
+				"type": "text"
+			},
+			{
+				"name": "User2",
+				"type": "text"
+			},
+			{
+				"name": "User3",
+				"type": "text"
+			},
+			{
+				"name": "User4",
+				"type": "text"
+			},
+			{
+				"name": "User5",
+				"type": "text"
+			},
+			{
+				"name": "User6",
+				"type": "text"
+			},
+			{
+				"name": "User7",
+				"type": "text"
+			},
+			{
+				"name": "User8",
+				"type": "text"
+			},
+			{
+				"name": "User9",
+				"type": "text"
+			},
+			{
+				"name": "User10",
+				"type": "text"
+			},
+			{
+				"name": "User11",
+				"type": "text"
+			},
+			{
+				"name": "User12",
+				"type": "text"
+			},
+			{
+				"name": "ESG_REASON",
+				"type": "text"
+			},
+			{
+				"name": "ESG_APPROVER",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM1",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM2",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM3",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM4",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM5",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM6",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM7",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM8",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM9",
+				"type": "text"
+			},
+			{
+				"name": "CUSTOM10",
+				"type": "text"
+			},
+			{
+				"name": "ClassificationID",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INMAST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

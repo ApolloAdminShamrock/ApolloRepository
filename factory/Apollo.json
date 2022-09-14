@@ -1,0 +1,9 @@
+{
+	"name": "Apollo",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "92cf45ae-1129-4f99-881f-d8a9426eb088",
+		"tenantId": "80726221-f16a-4d23-87e7-7e389dde5a25"
+	}
+}

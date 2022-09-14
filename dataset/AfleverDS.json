@@ -1,0 +1,329 @@
+{
+	"name": "AfleverDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AfleverDLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "AFLEVERD",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "AFLEVERBK",
+				"type": "String"
+			},
+			{
+				"name": "AFLEVERNR",
+				"type": "String"
+			},
+			{
+				"name": "LIJNNR",
+				"type": "String"
+			},
+			{
+				"name": "TYPELN",
+				"type": "String"
+			},
+			{
+				"name": "TYPELNINDEX",
+				"type": "String"
+			},
+			{
+				"name": "ARTIKEL",
+				"type": "String"
+			},
+			{
+				"name": "BENAMING",
+				"type": "String"
+			},
+			{
+				"name": "AANTAL",
+				"type": "String"
+			},
+			{
+				"name": "STDPRIJS",
+				"type": "String"
+			},
+			{
+				"name": "KORTING1",
+				"type": "String"
+			},
+			{
+				"name": "KORTING2",
+				"type": "String"
+			},
+			{
+				"name": "EENHPR",
+				"type": "String"
+			},
+			{
+				"name": "TOTAAL",
+				"type": "String"
+			},
+			{
+				"name": "BTWKODE",
+				"type": "String"
+			},
+			{
+				"name": "VERKREK",
+				"type": "String"
+			},
+			{
+				"name": "MAGAZIJN",
+				"type": "String"
+			},
+			{
+				"name": "PROJECT",
+				"type": "String"
+			},
+			{
+				"name": "EENHPRIV",
+				"type": "String"
+			},
+			{
+				"name": "TOTAALIV",
+				"type": "String"
+			},
+			{
+				"name": "VALUTA",
+				"type": "String"
+			},
+			{
+				"name": "KODEFC",
+				"type": "String"
+			},
+			{
+				"name": "KLANT",
+				"type": "String"
+			},
+			{
+				"name": "EENHPRINCL",
+				"type": "String"
+			},
+			{
+				"name": "EENHPRINCLIV",
+				"type": "String"
+			},
+			{
+				"name": "KOSTPRIJS",
+				"type": "String"
+			},
+			{
+				"name": "KOSTPRIJSIV",
+				"type": "String"
+			},
+			{
+				"name": "AKWAARDE",
+				"type": "String"
+			},
+			{
+				"name": "KODESAMENST",
+				"type": "String"
+			},
+			{
+				"name": "DATUM",
+				"type": "String"
+			},
+			{
+				"name": "STFAKT",
+				"type": "String"
+			},
+			{
+				"name": "GEHELEN",
+				"type": "String"
+			},
+			{
+				"name": "ONDERDELEN",
+				"type": "String"
+			},
+			{
+				"name": "DAGBOEK",
+				"type": "String"
+			},
+			{
+				"name": "BOEKJAAR",
+				"type": "String"
+			},
+			{
+				"name": "FAKTNR",
+				"type": "String"
+			},
+			{
+				"name": "FAKTDAT",
+				"type": "String"
+			},
+			{
+				"name": "VERVDAT",
+				"type": "String"
+			},
+			{
+				"name": "ORDERBK",
+				"type": "String"
+			},
+			{
+				"name": "ORDERNR",
+				"type": "String"
+			},
+			{
+				"name": "ORDERTPLN",
+				"type": "String"
+			},
+			{
+				"name": "ORDERLIJN",
+				"type": "String"
+			},
+			{
+				"name": "OFFERTEBK",
+				"type": "String"
+			},
+			{
+				"name": "OFFERTENR",
+				"type": "String"
+			},
+			{
+				"name": "OFFERTELIJN",
+				"type": "String"
+			},
+			{
+				"name": "OFFERTETPLN",
+				"type": "String"
+			},
+			{
+				"name": "ORDVOLLEDIG",
+				"type": "String"
+			},
+			{
+				"name": "JOB",
+				"type": "String"
+			},
+			{
+				"name": "COLLIS",
+				"type": "String"
+			},
+			{
+				"name": "PALETTEN",
+				"type": "String"
+			},
+			{
+				"name": "HISTDAT",
+				"type": "String"
+			},
+			{
+				"name": "HISTORIEK",
+				"type": "String"
+			},
+			{
+				"name": "COMPERC",
+				"type": "String"
+			},
+			{
+				"name": "COMMISSIEIV",
+				"type": "String"
+			},
+			{
+				"name": "TOTCOMIV",
+				"type": "String"
+			},
+			{
+				"name": "GOEDCODE",
+				"type": "String"
+			},
+			{
+				"name": "MASSAKG",
+				"type": "String"
+			},
+			{
+				"name": "AANVEENH",
+				"type": "String"
+			},
+			{
+				"name": "PRINTETIK",
+				"type": "String"
+			},
+			{
+				"name": "ETIKGEPRINT",
+				"type": "String"
+			},
+			{
+				"name": "SOORTPRIJS",
+				"type": "String"
+			},
+			{
+				"name": "REFVORD",
+				"type": "String"
+			},
+			{
+				"name": "REFNACALC",
+				"type": "String"
+			},
+			{
+				"name": "GNBONKORTING",
+				"type": "String"
+			},
+			{
+				"name": "ISHERST",
+				"type": "String"
+			},
+			{
+				"name": "ANP1N1",
+				"type": "String"
+			},
+			{
+				"name": "ANP1N2",
+				"type": "String"
+			},
+			{
+				"name": "ANP2N1",
+				"type": "String"
+			},
+			{
+				"name": "ANP2N2",
+				"type": "String"
+			},
+			{
+				"name": "UITVOORRAAD",
+				"type": "String"
+			},
+			{
+				"name": "UITVDAT",
+				"type": "String"
+			},
+			{
+				"name": "HFDARTLIJNNR",
+				"type": "String"
+			},
+			{
+				"name": "BKMVOLGNR",
+				"type": "String"
+			},
+			{
+				"name": "BKMGEDRAG",
+				"type": "String"
+			},
+			{
+				"name": "STDPRIJSINCL",
+				"type": "String"
+			},
+			{
+				"name": "LANDORI",
+				"type": "String"
+			},
+			{
+				"name": "OMSCHR",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

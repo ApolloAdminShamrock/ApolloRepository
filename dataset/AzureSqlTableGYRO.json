@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlTableGYRO",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Cust_TDSGyroDet"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

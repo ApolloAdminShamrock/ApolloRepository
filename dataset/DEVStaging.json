@@ -1,0 +1,17 @@
+{
+	"name": "DEVStaging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LSDevStaging",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_DIM_Product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

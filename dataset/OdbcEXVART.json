@@ -1,0 +1,16 @@
+{
+	"name": "OdbcEXVART",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OdbcEXVARTLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "\"EXVART\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

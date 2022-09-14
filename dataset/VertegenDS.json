@@ -1,0 +1,77 @@
+{
+	"name": "VertegenDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "VertegenLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "VERTEGEN",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "KODE",
+				"type": "String"
+			},
+			{
+				"name": "NAAM",
+				"type": "String"
+			},
+			{
+				"name": "COMPERC",
+				"type": "String"
+			},
+			{
+				"name": "MINPERCKORT",
+				"type": "String"
+			},
+			{
+				"name": "ADRES1",
+				"type": "String"
+			},
+			{
+				"name": "ADRES2",
+				"type": "String"
+			},
+			{
+				"name": "ADRES3",
+				"type": "String"
+			},
+			{
+				"name": "LAND",
+				"type": "String"
+			},
+			{
+				"name": "POSTNR",
+				"type": "String"
+			},
+			{
+				"name": "GEMEENTE",
+				"type": "String"
+			},
+			{
+				"name": "TELEFOON1",
+				"type": "String"
+			},
+			{
+				"name": "TELEFAX",
+				"type": "String"
+			},
+			{
+				"name": "ARCHIEF",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

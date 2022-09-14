@@ -1,0 +1,317 @@
+{
+	"name": "KlantenDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "KlantenLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "KLANTEN",
+				"folderPath": "input"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "NUMMER",
+				"type": "String"
+			},
+			{
+				"name": "AANSPREK",
+				"type": "String"
+			},
+			{
+				"name": "NAAM",
+				"type": "String"
+			},
+			{
+				"name": "ADRES1",
+				"type": "String"
+			},
+			{
+				"name": "ADRES2",
+				"type": "String"
+			},
+			{
+				"name": "ADRES3",
+				"type": "String"
+			},
+			{
+				"name": "LAND",
+				"type": "String"
+			},
+			{
+				"name": "POSTNR",
+				"type": "String"
+			},
+			{
+				"name": "GEMEENTE",
+				"type": "String"
+			},
+			{
+				"name": "TELEFOON1",
+				"type": "String"
+			},
+			{
+				"name": "TELEFOON2",
+				"type": "String"
+			},
+			{
+				"name": "TELEFAX",
+				"type": "String"
+			},
+			{
+				"name": "URL",
+				"type": "String"
+			},
+			{
+				"name": "TAALKODE",
+				"type": "String"
+			},
+			{
+				"name": "BTWREGIME",
+				"type": "String"
+			},
+			{
+				"name": "BTWNR",
+				"type": "String"
+			},
+			{
+				"name": "BANK",
+				"type": "String"
+			},
+			{
+				"name": "BANKNR",
+				"type": "String"
+			},
+			{
+				"name": "BANKNAAM",
+				"type": "String"
+			},
+			{
+				"name": "BANKADRES1",
+				"type": "String"
+			},
+			{
+				"name": "BANKADRES2",
+				"type": "String"
+			},
+			{
+				"name": "BANKPLAATS",
+				"type": "String"
+			},
+			{
+				"name": "VERTEGENW",
+				"type": "String"
+			},
+			{
+				"name": "GROEP1",
+				"type": "String"
+			},
+			{
+				"name": "GROEP2",
+				"type": "String"
+			},
+			{
+				"name": "GROEP3",
+				"type": "String"
+			},
+			{
+				"name": "MANINGEN",
+				"type": "String"
+			},
+			{
+				"name": "DOMICIL",
+				"type": "String"
+			},
+			{
+				"name": "KREDLIMIET",
+				"type": "String"
+			},
+			{
+				"name": "BETVOORW",
+				"type": "String"
+			},
+			{
+				"name": "VALUTA",
+				"type": "String"
+			},
+			{
+				"name": "ISSTDBOEK",
+				"type": "String"
+			},
+			{
+				"name": "STDBOEK",
+				"type": "String"
+			},
+			{
+				"name": "TEGENBOEK",
+				"type": "String"
+			},
+			{
+				"name": "PRIJSCAT",
+				"type": "String"
+			},
+			{
+				"name": "KORTING1",
+				"type": "String"
+			},
+			{
+				"name": "KORTING2",
+				"type": "String"
+			},
+			{
+				"name": "FACTPERBON",
+				"type": "String"
+			},
+			{
+				"name": "TEKST",
+				"type": "String"
+			},
+			{
+				"name": "KORTCONT",
+				"type": "String"
+			},
+			{
+				"name": "GLOBKORT",
+				"type": "String"
+			},
+			{
+				"name": "CENTRREKNR",
+				"type": "String"
+			},
+			{
+				"name": "MELDING",
+				"type": "String"
+			},
+			{
+				"name": "ZNDIVK",
+				"type": "String"
+			},
+			{
+				"name": "FACTKLANT",
+				"type": "String"
+			},
+			{
+				"name": "METADMKOST",
+				"type": "String"
+			},
+			{
+				"name": "CREADATUM",
+				"type": "String"
+			},
+			{
+				"name": "CREAUUR",
+				"type": "String"
+			},
+			{
+				"name": "CREAUSER",
+				"type": "String"
+			},
+			{
+				"name": "WIJZDATUM",
+				"type": "String"
+			},
+			{
+				"name": "WIJZUUR",
+				"type": "String"
+			},
+			{
+				"name": "WIJZUSER",
+				"type": "String"
+			},
+			{
+				"name": "DOMBANKNR",
+				"type": "String"
+			},
+			{
+				"name": "ALTCODE",
+				"type": "String"
+			},
+			{
+				"name": "ZNDKLKRT",
+				"type": "String"
+			},
+			{
+				"name": "SLA",
+				"type": "String"
+			},
+			{
+				"name": "VERLTAR",
+				"type": "String"
+			},
+			{
+				"name": "VRIJBEROEP",
+				"type": "String"
+			},
+			{
+				"name": "DAGBOEK",
+				"type": "String"
+			},
+			{
+				"name": "FACTAFDRUK",
+				"type": "String"
+			},
+			{
+				"name": "GOEDKEURDAT",
+				"type": "String"
+			},
+			{
+				"name": "GOEDKEURNAAM",
+				"type": "String"
+			},
+			{
+				"name": "GLNCODE",
+				"type": "String"
+			},
+			{
+				"name": "MANDAAT",
+				"type": "String"
+			},
+			{
+				"name": "ELEKTRONISCH",
+				"type": "String"
+			},
+			{
+				"name": "ELEKTRTYPE",
+				"type": "String"
+			},
+			{
+				"name": "ARCHIEF",
+				"type": "String"
+			},
+			{
+				"name": "CWALERT",
+				"type": "String"
+			},
+			{
+				"name": "BETALINGWEB",
+				"type": "String"
+			},
+			{
+				"name": "PROVIDER",
+				"type": "String"
+			},
+			{
+				"name": "PROVIDERTYPE",
+				"type": "String"
+			},
+			{
+				"name": "PARTICIPANT",
+				"type": "String"
+			},
+			{
+				"name": "BELGIANGOV",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

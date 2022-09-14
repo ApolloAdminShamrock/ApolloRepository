@@ -1,0 +1,24 @@
+{
+	"name": "OpenPOcsv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LSOpenPOcsv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "OPEN_PO.csv",
+				"folderPath": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

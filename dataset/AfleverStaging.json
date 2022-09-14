@@ -1,0 +1,381 @@
+{
+	"name": "AfleverStaging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AfleverStagingLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "AFLEVERBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AFLEVERNR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "KODEFC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "KLANT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LVANR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NAAM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADRES3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LAND",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTNR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GEMEENTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VALUTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KOERS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BTWREGIME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OMSCHR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRIJSCAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GLOBKORT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KORTKONT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "KREDBEPERK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTEXCL",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTEXCLIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTBTW",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTBTWIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TEBET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TEBETIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GEVRLEVDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "BEVLEVDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PERSOON",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERTEGENW",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERVWIJZE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSPORTEUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DAGBOEK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BOEKJAAR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FAKTNR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FAKTDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "VERVDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "STFAKT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BEDRAGKK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BEDRAGKB",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PROJECT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ONTVANGENIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ONTVANGEN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CTPNR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CONTACTP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COLLIS",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PALETTEN",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "IVK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "IVKIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GEWICHT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BEDRAGGK",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TOTCOMIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AARDTRANS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LIDSTAAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ADMKOST",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ADMKOSTIV",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "GEWEST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INCOTERM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FACTKLANT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREADATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREAUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREAUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZDATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "WIJZUUR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WIJZUSER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSPBK",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSPNR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ISVERLTAR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UITVOORRAAD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UITVDAT",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "TAALKODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISBTWINCL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BPOINTFACTID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BETVOORW",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOMICIL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VOORSCHOTFCT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OPEISDATUM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "REFERENTIE",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "AFLEVER"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
